@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Abdullah Al-Labani, AI & Robotics Student specializing in ML Engineering, and Generative AI Applications.">
+    <meta name="description" content="Portfolio of Abdullah Al-Labani, AI & Robotics Student specializing in ML Engineering, Generative AI, and applied research.">
     <title>Abdullah Al-Labani — Selected Projects & Portfolio</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <!-- FontAwesome for Social Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="light-theme">
-    <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to content</a>
-
-    <!-- Navigation -->
     <header class="header">
         <div class="nav-container">
             <a href="#" class="nav-logo" id="nav-logo-link">Abdullah Al-Labani</a>
             <nav class="nav-links" aria-label="Main Navigation">
                 <a href="#projects" class="nav-item" id="nav-projects-link">Projects</a>
                 <a href="#research" class="nav-item" id="nav-research-link">Research</a>
+                <a href="#experience" class="nav-item">Experience</a>
                 <a href="#about" class="nav-item" id="nav-about-link">About</a>
                 <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
-                    <i class="fa-solid fa-moon moon-icon"></i>
-                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <i class="fa-solid fa-moon moon-icon"></i><i class="fa-solid fa-sun sun-icon"></i>
                 </button>
             </nav>
         </div>
@@ -41,455 +30,150 @@
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
         <section class="hero-section" id="hero">
             <div class="hero-container">
                 <span class="hero-tag scroll-reveal">Based in Nürnberg, Germany</span>
                 <h1 class="hero-title scroll-reveal">Abdullah Al-Labani</h1>
-                <p class="hero-subtitle scroll-reveal">
-                    AI & Robotics Student <span class="bullet">•</span> ML and Generative AI <span class="bullet">•</span>
-                    Research and development
-                </p>
-                <div class="hero-intro scroll-reveal">
-                    <p>Master Student @ <a href="https://www.utn.de/en/" target="_blank" rel="noopener noreferrer">University of Technology Nuremberg</a></p>
-                </div>
+                <p class="hero-subtitle scroll-reveal">AI & Robotics Student <span class="bullet">•</span> ML and Generative AI <span class="bullet">•</span> Research and development</p>
+                <div class="hero-intro scroll-reveal"><p>Master Student @ <a href="https://www.utn.de/en/" target="_blank" rel="noopener noreferrer">University of Technology Nuremberg</a></p></div>
                 <div class="hero-cta scroll-reveal">
                     <a href="#projects" class="btn btn-primary" id="hero-projects-cta">Selected Works</a>
                     <div class="hero-socials">
-                        <a href="https://github.com/Abdullah-Taha9" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub Profile" class="social-link" id="hero-github-link">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/taha9" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn Profile" class="social-link" id="hero-linkedin-link">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://huggingface.co/Abdullah-Taha" target="_blank" rel="noopener noreferrer"
-                                    aria-label="Hugging Face Profile" class="social-link" id="hero-huggingface-link">
-                                    🤗
-                        </a>
+                        <a href="https://github.com/Abdullah-Taha9" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link" id="hero-github-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/taha9" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link" id="hero-linkedin-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://huggingface.co/Abdullah-Taha" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile" class="social-link" id="hero-huggingface-link">🤗</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Selected Projects Section -->
         <section class="projects-section" id="projects">
             <div class="section-container">
                 <div class="section-header scroll-reveal">
                     <span class="section-tag">01 / Portfolio</span>
                     <h2 class="section-title">Selected Projects</h2>
-                    <p class="section-description">A curated list of applications, pipelines, and frameworks built
-                        end-to-end.</p>
+                    <p class="section-description">A curated list of applications, datasets, pipelines, and frameworks built end-to-end.</p>
                 </div>
-
                 <div class="projects-grid">
-                    <!-- 1. TellPDF -->
                     <article class="project-card scroll-reveal" data-project="tellpdf">
-                        <a href="https://tellpdf.com" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit TellPDF live website">
-                            <div class="project-image-wrapper">
-                                <img src="public/tellpdf.png" alt="Screenshot of TellPDF interface showing document workspace"
-                                    class="project-img" loading="lazy">
-                            </div>
-                        </a>
-                        <div class="project-meta">
-                            <span class="project-num">01.</span>
-                            <span class="project-tech">TypeScript • React • AI APIs • Browser Storage</span>
-                        </div>
+                        <a href="https://tellpdf.com" target="_blank" rel="noopener noreferrer" class="project-image-link"><div class="project-image-wrapper"><img src="public/tellpdf.png" alt="Screenshot of TellPDF interface" class="project-img" loading="lazy"></div></a>
+                        <div class="project-meta"><span class="project-num">01.</span><span class="project-tech">TypeScript • React • AI APIs • Browser Storage</span></div>
                         <h3 class="project-title">TellPDF — AI-Powered Document Assistant</h3>
-                        <p class="project-excerpt">A browser-based workspace with an agentic AI planner that enables
-                            interacting with documents directly in-browser, removing server-side uploads.</p>
-                        <button class="project-link open-modal-btn" aria-label="Read details about TellPDF">Read Case
-                            Study <i class="fa-solid fa-arrow-right"></i></button>
+                        <p class="project-excerpt">A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.</p>
+                        <a href="https://tellpdf.com" target="_blank" rel="noopener noreferrer" class="project-link">Visit Project <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
- 
-                    <!-- 2. ToGerman -->
+
+                    <!-- Kept for later restoration; intentionally hidden from the portfolio.
                     <article class="project-card scroll-reveal" data-project="togerman">
-                        <a href="https://togerman-21ad4.firebaseapp.com" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit ToGerman live website">
-                            <div class="project-image-wrapper">
-                                <img src="public/togerman.png" alt="Screenshot of ToGerman language learning app"
-                                    class="project-img" loading="lazy">
-                            </div>
-                        </a>
-                        <div class="project-meta">
-                            <span class="project-num">02.</span>
-                            <span class="project-tech">Firebase • TypeScript • AI APIs • FSRS</span>
-                        </div>
+                        <a href="https://togerman-21ad4.firebaseapp.com" target="_blank" rel="noopener noreferrer" class="project-image-link"><div class="project-image-wrapper"><img src="public/togerman.png" alt="Screenshot of ToGerman language learning app" class="project-img"></div></a>
+                        <div class="project-meta"><span class="project-num">02.</span><span class="project-tech">Firebase • TypeScript • AI APIs • FSRS</span></div>
                         <h3 class="project-title">ToGerman — Contextual German Learning Platform</h3>
-                        <p class="project-excerpt">Full-stack platform integrating vocabulary lookup, spaced repetition,
-                            TTS, story generation, and conversational AI into a unified workflow.</p>
-                        <button class="project-link open-modal-btn" aria-label="Read details about ToGerman">Read Case
-                            Study <i class="fa-solid fa-arrow-right"></i></button>
+                        <p class="project-excerpt">Full-stack platform integrating vocabulary lookup, spaced repetition, TTS, story generation, and conversational AI.</p>
                     </article>
- 
-                    <!-- 3. Ink Puzzle -->
+                    -->
+
+                    <!-- Kept for later restoration; intentionally hidden from the portfolio.
                     <article class="project-card scroll-reveal" data-project="inkpuzzle">
-                        <a href="https://inkpuzzle.com" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit Ink Puzzle live website">
-                            <div class="project-image-wrapper">
-                                <img src="public/inkpuzzle.png" alt="Screenshot of Ink Puzzle game" class="project-img"
-                                    loading="lazy">
-                            </div>
-                        </a>
-                        <div class="project-meta">
-                            <span class="project-num">03.</span>
-                            <span class="project-tech">TypeScript • PWA • Browser APIs</span>
-                        </div>
+                        <a href="https://inkpuzzle.com" target="_blank" rel="noopener noreferrer" class="project-image-link"><div class="project-image-wrapper"><img src="public/inkpuzzle.png" alt="Screenshot of Ink Puzzle game" class="project-img"></div></a>
+                        <div class="project-meta"><span class="project-num">03.</span><span class="project-tech">TypeScript • PWA • Browser APIs</span></div>
                         <h3 class="project-title">Ink Puzzle — Procedural Game Platform</h3>
-                        <p class="project-excerpt">A procedural, offline-first browser puzzle platform with multiple
-                            game modes and reproducible puzzle generation, requiring zero installs.</p>
-                        <button class="project-link open-modal-btn" aria-label="Read details about Ink Puzzle">Read Case
-                            Study <i class="fa-solid fa-arrow-right"></i></button>
+                        <p class="project-excerpt">A procedural, offline-first browser puzzle platform with reproducible puzzle generation and multiple game modes.</p>
                     </article>
- 
-                    <!-- 4. forward.md -->
-                    <article class="project-card scroll-reveal" data-project="forward">
-                        <a href="https://github.com/Abdullah-Taha9/forward.md" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="View forward.md standard on GitHub">
-                            <div class="project-image-wrapper pattern-forward">
-                                <div class="abstract-pattern logo-pattern">
-                                    <div class="logo-wrapper">
-                                        <i class="fa-brands fa-github"></i>
-                                    </div>
-                                    <span>forward.md</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="project-meta">
-                            <span class="project-num">04.</span>
-                            <span class="project-tech">Markdown • AI Tooling • Context Management</span>
-                        </div>
+                    -->
+
+                    <article class="project-card scroll-reveal">
+                        <a href="https://github.com/Abdullah-Taha9/semantic-operator-dataset" target="_blank" rel="noopener noreferrer" class="project-image-link"><div class="project-image-wrapper"><img src="public/hf-products.png" alt="Semantic operator dataset visualization" class="project-img" loading="lazy"></div></a>
+                        <div class="project-meta"><span class="project-num">02.</span><span class="project-tech">LLMs • Semantic Filtering • Embeddings • Parquet</span></div>
+                        <h3 class="project-title">Semantic Operator Datasets — Products & Reviews</h3>
+                        <p class="project-excerpt">Large-scale semantic-filter datasets built by applying LLM-generated predicates to Amazon products and reviews, producing structured Boolean labels for filtering and evaluation.</p>
+                        <p class="research-text"><a href="https://huggingface.co/datasets/Abdullah-Taha/products-filtered-labels" target="_blank" rel="noopener noreferrer">View Products dataset on Hugging Face</a> · <a href="https://huggingface.co/datasets/Abdullah-Taha/reviews-filtered-labels" target="_blank" rel="noopener noreferrer">View Reviews dataset on Hugging Face</a></p>
+                        <a href="https://github.com/Abdullah-Taha9/semantic-operator-dataset" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="project-card scroll-reveal">
+                        <a href="https://github.com/Abdullah-Taha9/forward.md" target="_blank" rel="noopener noreferrer" class="project-image-link"><div class="project-image-wrapper pattern-forward"><div class="abstract-pattern logo-pattern"><div class="logo-wrapper"><i class="fa-brands fa-github"></i></div><span>forward.md</span></div></div></a>
+                        <div class="project-meta"><span class="project-num">03.</span><span class="project-tech">Markdown • AI Tooling • Context Management</span></div>
                         <h3 class="project-title">forward.md — AI-Assisted Workflow Convention</h3>
-                        <p class="project-excerpt">A lightweight markdown-based context-carrying standard to prevent
-                            session-loss in tool chains like Claude Code, Cursor, and Gemini CLI.</p>
-                        <button class="project-link open-modal-btn" aria-label="Read details about forward.md">Read Case
-                            Study <i class="fa-solid fa-arrow-right"></i></button>
+                        <p class="project-excerpt">A lightweight markdown-based context-carrying standard for preserving context across AI coding tool sessions.</p>
+                        <a href="https://github.com/Abdullah-Taha9/forward.md" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Research Projects Section -->
         <section class="research-section" id="research">
             <div class="section-container">
                 <div class="section-header scroll-reveal">
                     <span class="section-tag">02 / Research</span>
                     <h2 class="section-title">Research Projects</h2>
-                    <p class="section-description">Deep dives into machine learning models, optimization, and evaluation
-                        frameworks.</p>
+                    <p class="section-description">Research in model training, distillation, retrieval, authorship verification, and evaluation.</p>
                 </div>
-
                 <div class="research-list">
-                    <!-- Research 1: UTN Student Support Chatbot -->
+                    <div class="research-item scroll-reveal">
+                        <div class="research-info">
+                            <h3 class="research-title">Master's Thesis: Online Model Distillation for Semantic Operations</h3>
+                            <p class="research-text">Compared full SFT, PEFT, soft- and hard-label distillation, and embedding-based logistic regression for training a small student model online from teacher outputs during query execution.</p>
+                            <p class="research-text"><strong>Ongoing</strong> — findings intended for research publication.</p>
+                        </div>
+                        <div class="research-stats"><div class="stat-box"><span class="stat-number">SFT</span><span class="stat-label">Full Fine-tuning</span></div><div class="stat-box"><span class="stat-number">PEFT</span><span class="stat-label">Efficient Fine-tuning</span></div></div>
+                    </div>
+
                     <div class="research-item scroll-reveal" data-project="utn">
                         <div class="research-info">
-                            <h3 class="research-title">
-                                <a href="https://huggingface.co/spaces/Abdullah-Taha/utn-support-chatbot" target="_blank" rel="noopener noreferrer" class="research-title-link">UTN Student Support Chatbot</a>
-                                <a href="https://huggingface.co/spaces/Abdullah-Taha/utn-support-chatbot"
-                                    target="_blank" rel="noopener noreferrer" class="research-hf-link"
-                                    aria-label="View UTN Chatbot on Hugging Face">
-                                    <i class="fa-brands fa-hugging-face"></i>
-                                </a>
-                            </h3>
-                            <p class="research-text">Retrieval-augmented chatbot combining semantic search, keyword
-                                retrieval, and a fine-tuned model to help students navigate university documentation.
-                            </p>
-                            <button class="project-link open-modal-btn research-case-study-btn"
-                                aria-label="Read details about UTN Student Support Chatbot">Read Case Study <i
-                                    class="fa-solid fa-arrow-right"></i></button>
+                            <h3 class="research-title"><a href="https://huggingface.co/spaces/Abdullah-Taha/utn-support-chatbot" target="_blank" rel="noopener noreferrer" class="research-title-link">UTN Student Support Chatbot</a></h3>
+                            <p class="research-text">Retrieval-augmented chatbot combining semantic search, keyword retrieval, and a fine-tuned model to help students navigate university documentation.</p>
                         </div>
-                        <div class="research-stats">
-                            <div class="stat-box">
-                                <span class="stat-number">RAG</span>
-                                <span class="stat-label">Architecture</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">PEFT</span>
-                                <span class="stat-label">Fine-tuned</span>
-                            </div>
-                        </div>
+                        <div class="research-stats"><div class="stat-box"><span class="stat-number">RAG</span><span class="stat-label">Architecture</span></div><div class="stat-box"><span class="stat-number">PEFT</span><span class="stat-label">Fine-tuned</span></div></div>
                     </div>
 
-                    <!-- Research 2 -->
                     <div class="research-item scroll-reveal">
                         <div class="research-info">
-                            <h3 class="research-title">
-                                <a href="https://github.com/Abdullah-Taha9/plotcraft-text-to-python" target="_blank" rel="noopener noreferrer" class="research-title-link">PlotCraft: Scientific Figure Generation from Text</a>
-                                <a href="https://github.com/Abdullah-Taha9/plotcraft-text-to-python" target="_blank" rel="noopener noreferrer"
-                                    class="research-github-link" aria-label="View PlotCraft on GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </h3>
-                            <p class="research-text">Built three PyTorch training pipelines and implemented GRPO (Group
-                                Relative Policy Optimization) post-training with visual similarity rewards to align plot
-                                rendering outputs.</p>
+                            <h3 class="research-title"><a href="https://github.com/Abdullah-Taha9/plotcraft-text-to-python" target="_blank" rel="noopener noreferrer" class="research-title-link">PlotCraft: Scientific Figure Generation from Text</a></h3>
+                            <p class="research-text">Built three PyTorch training pipelines and implemented GRPO post-training with visual similarity rewards to align plot rendering outputs.</p>
                         </div>
-                        <div class="research-stats">
-                            <div class="stat-box">
-                                <span class="stat-number">97%</span>
-                                <span class="stat-label">Code Execution Rate</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">53K</span>
-                                <span class="stat-label">Sample Dataset</span>
-                            </div>
-                        </div>
+                        <div class="research-stats"><div class="stat-box"><span class="stat-number">97%</span><span class="stat-label">Code Execution Rate</span></div><div class="stat-box"><span class="stat-number">53K</span><span class="stat-label">Sample Dataset</span></div></div>
                     </div>
 
-                    <!-- Research 3 -->
                     <div class="research-item scroll-reveal">
                         <div class="research-info">
-                            <h3 class="research-title">
-                                <a href="https://github.com/Abdullah-Taha9/llm-authorship-verification-german" target="_blank" rel="noopener noreferrer" class="research-title-link">LLM Authorship Verification on German Texts</a>
-                                <a href="https://github.com/Abdullah-Taha9/llm-authorship-verification-german" target="_blank" rel="noopener noreferrer"
-                                    class="research-github-link"
-                                    aria-label="View LLM Authorship Verification on GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </h3>
-                            <p class="research-text">Evaluated six frontier language models' stylistic profiles, testing
-                                text pairs in German for consistent stylistic traits across varying subject matters.</p>
+                            <h3 class="research-title"><a href="https://github.com/Abdullah-Taha9/llm-authorship-verification-german" target="_blank" rel="noopener noreferrer" class="research-title-link">LLM Authorship Verification on German Texts</a></h3>
+                            <p class="research-text">Evaluated six frontier language models' stylistic profiles on German text pairs to test consistency of stylistic traits across subject matters.</p>
                         </div>
-                        <div class="research-stats">
-                            <div class="stat-box">
-                                <span class="stat-number">40K+</span>
-                                <span class="stat-label">Text Pairs Analyzed</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">0.68</span>
-                                <span class="stat-label">GPT-4.1-mini F1 Score</span>
-                            </div>
-                        </div>
+                        <div class="research-stats"><div class="stat-box"><span class="stat-number">40K+</span><span class="stat-label">Text Pairs Analyzed</span></div><div class="stat-box"><span class="stat-number">0.68</span><span class="stat-label">GPT-4.1-mini F1</span></div></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Strengths / About Section -->
-        <section class="about-section" id="about">
+        <section class="research-section" id="experience">
             <div class="section-container">
                 <div class="section-header scroll-reveal">
-                    <span class="section-tag">03 / About</span>
-                    <h2 class="section-title">Core Strengths</h2>
-                    <p class="section-description">How I approach engineering, system design, and collaboration.</p>
+                    <span class="section-tag">03 / Experience</span>
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-description">Applied AI engineering and client-facing product development.</p>
                 </div>
-
-                <div class="about-layout">
-                    <div class="strengths-grid">
-                        <div class="strength-card scroll-reveal">
-                            <h4 class="strength-title">AI & Product Ownership</h4>
-                            <p class="strength-desc">Building robust, production-ready AI applications from initial
-                                ideation and architecture design through deployment and operational maintenance.</p>
-                        </div>
-                        <div class="strength-card scroll-reveal">
-                            <h4 class="strength-title">Agentic LLM Systems</h4>
-                            <p class="strength-desc">Designing reliable, autonomous agent workflows utilizing data
-                                validation, schema repair, and retrieval architectures (RAG) to solve complex workflows.
-                            </p>
-                        </div>
-                        <div class="strength-card scroll-reveal">
-                            <h4 class="strength-title">Full-Stack Software Engineering</h4>
-                            <p class="strength-desc">Writing performant, type-safe frontend and backend code across
-                                TypeScript, Python, React, Flask, and serverless architectures.</p>
-                        </div>
-                        <div class="strength-card scroll-reveal">
-                            <h4 class="strength-title">Stakeholder & Impact Driven</h4>
-                            <p class="strength-desc">Collaborating closely with domain experts and stakeholders to build
-                                solutions with measurable impact (e.g. automating a 2-week workflow down to 5 minutes).
-                            </p>
-                        </div>
-                    </div>
+                <div class="research-list">
+                    <div class="research-item scroll-reveal"><div class="research-info"><h3 class="research-title">Schaeffler AG <span class="project-tech">— Praktikant (Pflichtpraktikum)</span></h3><p class="research-text"><strong>Herzogenaurach, Germany | May 2025 – March 2026</strong></p><p class="research-text">Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.</p><p class="research-text"><strong>Applied Skills:</strong> Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing</p></div></div>
+                    <div class="research-item scroll-reveal"><div class="research-info"><h3 class="research-title">Sekuen <span class="project-tech">— Business Development (AI)</span></h3><p class="research-text"><strong>Dubai, UAE | December 2023 – June 2024</strong></p><p class="research-text">Built and presented working AI prototypes to potential B2B clients across multiple industries.</p><p class="research-text"><strong>Applied Skills:</strong> AI prototyping, workflow mapping, stakeholder communication</p></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <div class="section-container scroll-reveal">
-                <div class="contact-card">
-                    <h2 class="contact-title">Let's connect</h2>
-                    <p class="contact-subtitle">I'm always open to discussing research collaborations, software roles,
-                        or innovative AI applications.</p>
-                    <div class="contact-links">
-                        <a href="mailto:labani.abdullah@gmail.com" class="contact-email"
-                            id="footer-email-link">labani.abdullah@gmail.com</a>
-                        <div class="contact-social-row">
-                            <a href="https://github.com/Abdullah-Taha9" target="_blank" rel="noopener noreferrer"
-                                id="footer-github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                            <a href="https://linkedin.com/in/taha9" target="_blank" rel="noopener noreferrer"
-                                id="footer-linkedin-link"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-                            <a href="https://huggingface.co/Abdullah-Taha" target="_blank" rel="noopener noreferrer"
-                                id="footer-huggingface-link">🤗 Hugging Face</a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="about-section" id="about">
+            <div class="section-container">
+                <div class="section-header scroll-reveal"><span class="section-tag">04 / About</span><h2 class="section-title">Core Strengths</h2><p class="section-description">How I approach engineering, system design, and collaboration.</p></div>
+                <div class="about-layout"><div class="strengths-grid">
+                    <div class="strength-card scroll-reveal"><h4 class="strength-title">AI & Product Ownership</h4><p class="strength-desc">Building robust, production-ready AI applications from initial ideation and architecture design through deployment and operational maintenance.</p></div>
+                    <div class="strength-card scroll-reveal"><h4 class="strength-title">Agentic LLM Systems</h4><p class="strength-desc">Designing reliable, autonomous agent workflows utilizing data validation, schema repair, and retrieval architectures (RAG) to solve complex workflows.</p></div>
+                    <div class="strength-card scroll-reveal"><h4 class="strength-title">Full-Stack Software Engineering</h4><p class="strength-desc">Writing performant, type-safe frontend and backend code across TypeScript, Python, React, Flask, and serverless architectures.</p></div>
+                    <div class="strength-card scroll-reveal"><h4 class="strength-title">Stakeholder & Impact Driven</h4><p class="strength-desc">Collaborating closely with domain experts and stakeholders to build solutions with measurable impact.</p></div>
+                </div></div>
             </div>
         </section>
+
+        <section class="contact-section"><div class="section-container scroll-reveal"><div class="contact-card"><h2 class="contact-title">Let's connect</h2><p class="contact-subtitle">I'm always open to discussing research collaborations, software roles, or innovative AI applications.</p><div class="contact-links"><a href="mailto:labani.abdullah@gmail.com" class="contact-email" id="footer-email-link">labani.abdullah@gmail.com</a><div class="contact-social-row"><a href="https://github.com/Abdullah-Taha9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a><a href="https://linkedin.com/in/taha9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a><a href="https://huggingface.co/Abdullah-Taha" target="_blank" rel="noopener noreferrer">🤗 Hugging Face</a></div></div></div></div></section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Abdullah Al-Labani.</p>
-            <p>Nürnberg, Germany</p>
-        </div>
-    </footer>
-
-    <!-- Case Study Modal / Drawer -->
-    <dialog class="modal-drawer" id="project-modal" aria-modal="true" aria-labelledby="modal-project-title">
-        <div class="modal-content">
-            <header class="modal-header">
-                <div class="modal-meta-top">
-                    <span class="modal-num" id="modal-project-num">01.</span>
-                    <span class="modal-tech" id="modal-project-tech">Tech stack</span>
-                </div>
-                <h2 class="modal-title" id="modal-project-title">Project Title</h2>
-                <button class="close-modal-btn" id="close-modal-btn" aria-label="Close details dialog">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </header>
-
-            <div class="modal-body">
-                <!-- Project Live Link -->
-                <div id="modal-project-link-wrapper" class="modal-link-section">
-                    <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"
-                        id="modal-project-link">
-                        Visit Live Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-
-                <div class="modal-grid">
-                    <div class="modal-column">
-                        <section class="modal-section">
-                            <h3>The Problem</h3>
-                            <p id="modal-problem">Description of the problem goes here.</p>
-                        </section>
-
-                        <section class="modal-section">
-                            <h3>The Solution</h3>
-                            <p id="modal-solution">Description of the solution goes here.</p>
-                        </section>
-                    </div>
-
-                    <div class="modal-column">
-                        <section class="modal-section" id="modal-contribution-section">
-                            <h3>My Contribution</h3>
-                            <ul id="modal-contribution" class="modal-list">
-                                <!-- Contribution list will be dynamically populated -->
-                            </ul>
-                        </section>
-
-                        <section class="modal-section">
-                            <h3>Highlights</h3>
-                            <ul id="modal-highlights" class="modal-list">
-                                <!-- Highlights list will be dynamically populated -->
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </dialog>
-
-    <!-- Project Data (hidden, parsed by JS) -->
-    <script id="project-data" type="application/json">
-    {
-        "tellpdf": {
-            "num": "01.",
-            "title": "TellPDF — AI-Powered Document Assistant",
-            "tech": "TypeScript • React • AI APIs • Browser Storage",
-            "link": "https://tellpdf.com",
-            "problem": "Reading and extracting information from large documents is slow and fragmented. Existing solutions often require uploading documents to external servers.",
-            "solution": "Built a browser-based document workspace with an agentic AI planner that enables users to interact with documents directly in the browser without uploading files.",
-            "contribution": [
-                "Designed and implemented the entire application independently",
-                "Built the document processing workflow",
-                "Implemented agentic planning capabilities",
-                "Shipped and maintained the product for real users"
-            ],
-            "highlights": [
-                "Fully client-side architecture",
-                "No server required",
-                "Real-world deployment",
-                "End-to-end ownership"
-            ]
-        },
-        "togerman": {
-            "num": "02.",
-            "title": "ToGerman — Contextual German Learning Platform",
-            "tech": "Firebase • TypeScript • AI APIs • FSRS",
-            "link": "https://togerman-21ad4.firebaseapp.com",
-            "problem": "Language learners often struggle to connect vocabulary acquisition, reading, speaking, and review into a single workflow.",
-            "solution": "Built a full-stack learning platform integrating AI-assisted vocabulary lookup, spaced repetition, text-to-speech, story generation, and conversational learning.",
-            "contribution": [
-                "Designed the database schema and full-stack flow on Firebase",
-                "Implemented Free Spaced Repetition Scheduler (FSRS) for smart review",
-                "Integrated AI APIs for dynamic contextual story generation"
-            ],
-            "highlights": [
-                "Full-stack architecture",
-                "AI-powered learning workflows",
-                "Real-world deployment",
-                "Continuous product iteration"
-            ]
-        },
-        "utn": {
-            "num": "Research 01.",
-            "title": "UTN Student Support Chatbot",
-            "tech": "LangChain • FAISS • BM25 • PEFT • Hugging Face",
-            "link": "https://huggingface.co/spaces/Abdullah-Taha/utn-support-chatbot",
-            "problem": "Students often struggle to find answers across university documentation and FAQs.",
-            "solution": "Built a retrieval-augmented chatbot combining semantic search and keyword retrieval with a fine-tuned language model.",
-            "contribution": [
-                "Engineered RAG search pipeline using LangChain, BM25, and FAISS",
-                "Fine-tuned LLM using Parameter-Efficient Fine-Tuning (PEFT) on domain-specific FAQs",
-                "Established a structured evaluation framework for chatbot responses"
-            ],
-            "highlights": [
-                "RAG architecture",
-                "Fine-tuning workflow",
-                "Structured evaluation framework"
-            ]
-        },
-        "inkpuzzle": {
-            "num": "03.",
-            "title": "Ink Puzzle — Procedural Game Platform",
-            "tech": "TypeScript • PWA • Browser APIs",
-            "link": "https://inkpuzzle.com",
-            "problem": "Create an engaging browser-based puzzle experience requiring no installation or account creation.",
-            "solution": "Built a procedural puzzle platform with multiple game modes, offline support, and reproducible puzzle generation.",
-            "contribution": [
-                "Developed client-side procedural generation algorithms",
-                "Structured as a Progressive Web App (PWA) with Service Workers",
-                "Optimized rendering using core HTML Canvas / DOM APIs"
-            ],
-            "highlights": [
-                "Offline-first architecture",
-                "Procedural content generation",
-                "Public deployment"
-            ]
-        },
-        "forward": {
-            "num": "04.",
-            "title": "forward.md — AI-Assisted Workflow Convention",
-            "tech": "Markdown • AI Tooling • Context Management",
-            "link": "https://github.com/Abdullah-Taha9/forward.md",
-            "problem": "AI-assisted software development often loses context between sessions, reducing productivity and consistency.",
-            "solution": "Created a markdown convention for maintaining project context across Claude Code, Cursor, and Gemini CLI workflows.",
-            "contribution": [
-                "Defined structural schemas for context preservation",
-                "Tested and refined convention across dozens of active projects"
-            ],
-            "highlights": [
-                "Used across all personal projects",
-                "Improves reproducibility",
-                "Enables long-term AI-assisted development workflows"
-            ]
-        }
-    }
-    </script>
-
-    <!-- Main Logic -->
+    <footer class="footer"><div class="footer-container"><p>&copy; 2026 Abdullah Al-Labani.</p><p>Nürnberg, Germany</p></div></footer>
     <script src="script.js"></script>
 </body>
-
 </html>
