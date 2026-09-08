@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (navLinks && navThemeToggle) {
         const utilities = document.createElement("div");
         utilities.className = "nav-utilities";
-
         const languageNav = document.createElement("nav");
         languageNav.className = "language-switcher";
         languageNav.setAttribute("aria-label", "Language");
@@ -83,21 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 heroSubtitle: "AI & Robotics Student • ML and Generative AI • Research and development",
                 heroIntro: "Master Student @ University of Technology Nuremberg",
                 experience: {
-                    tag: "01 / Experience", title: "Experience",
-                    description: "Education and professional experience in AI, robotics, and applied machine learning.",
+                    tag: "01 / Experience", title: "Experience", description: "Education and professional experience in AI, robotics, and applied machine learning.",
                     items: [
                         ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"],
                         ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
                         ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Supervised Machine Learning: Regression and Classification", "Advanced Learning Algorithms", "Unsupervised Learning, Recommenders, and Reinforcement Learning"], "View Certificate"],
                         ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"],
-                        ["Intensive German Language Training", "Goethe-Institut Göttingen, Göttingen, Germany", "Completed intensive German language training covering CEFR levels A1 to B1.", "German language development, A1–B1, intensive in-person study", ["Focus:", "Schwerpunkte:"]],
+                        ["Intensive German Language Training", "Goethe-Institut Göttingen, Göttingen, Germany", "Completed intensive German language training covering CEFR levels A1 to B1.", "German language development, A1–B1, intensive in-person study", ["Schwerpunkte:", "Focus:"]],
                         ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
                         ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"]
                     ]
                 },
                 projects: {
-                    tag: "02 / Portfolio", title: "Selected Projects",
-                    description: "A curated list of applications, datasets, pipelines, and frameworks built end-to-end.",
+                    tag: "02 / Portfolio", title: "Selected Projects", description: "A curated list of applications, datasets, pipelines, and frameworks built end-to-end.",
                     tellpdf: { title: "TellPDF — AI-Powered Document Assistant", excerpt: "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.", link: "Visit Project" },
                     datasets: { title: "Semantic Operator Datasets — Products & Reviews", excerpt: "Large-scale semantic-filter datasets built by applying LLM-generated predicates to Amazon products and reviews, producing structured Boolean labels for filtering and evaluation.", products: "View Products dataset on Hugging Face", reviews: "View Reviews dataset on Hugging Face", github: "View on GitHub" },
                     forward: { title: "forward.md — AI-Assisted Workflow Convention", excerpt: "A lightweight markdown-based context-carrying standard for preserving context across AI coding tool sessions.", link: "View on GitHub" }
@@ -151,15 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         };
 
-        function setText(selector, value) {
-            const element = document.querySelector(selector);
-            if (element) element.textContent = value;
-        }
-
-        function setHtml(selector, value) {
-            const element = document.querySelector(selector);
-            if (element) element.innerHTML = value;
-        }
+        function setText(selector, value) { const element = document.querySelector(selector); if (element) element.textContent = value; }
+        function setHtml(selector, value) { const element = document.querySelector(selector); if (element) element.innerHTML = value; }
 
         function setLanguages(lang) {
             const t = translations[lang];
@@ -168,11 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title = t.title;
             const metaDescription = document.querySelector('meta[name="description"]');
             if (metaDescription) metaDescription.content = t.description;
-
-            document.querySelectorAll(".nav-item").forEach((item, index) => {
-                if (t.nav[index]) item.textContent = t.nav[index];
-            });
-
+            document.querySelectorAll(".nav-item").forEach((item, index) => { if (t.nav[index]) item.textContent = t.nav[index]; });
             setText(".hero-tag", t.heroTag);
             setHtml(".hero-subtitle", t.heroSubtitle.replaceAll(" • ", ' <span class="bullet">•</span> '));
             const universityName = lang === "de" ? "Technische Universität Nürnberg" : "University of Technology Nuremberg";
@@ -212,54 +198,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 projectHeader.querySelector(".section-description").textContent = t.projects.description;
             }
             const projectCards = document.querySelectorAll("#projects .project-card");
-            if (projectCards[0]) {
-                projectCards[0].querySelector(".project-title").textContent = t.projects.tellpdf.title;
-                projectCards[0].querySelector(".project-excerpt").textContent = t.projects.tellpdf.excerpt;
-                projectCards[0].querySelector(".project-link").innerHTML = `${t.projects.tellpdf.link} <i class="fa-solid fa-arrow-right"></i>`;
-            }
-            if (projectCards[1]) {
-                projectCards[1].querySelector(".project-title").textContent = t.projects.datasets.title;
-                projectCards[1].querySelector(".project-excerpt").textContent = t.projects.datasets.excerpt;
-                const datasetLinks = projectCards[1].querySelectorAll(".dataset-links a");
-                if (datasetLinks[0]) datasetLinks[0].textContent = t.projects.datasets.products;
-                if (datasetLinks[1]) datasetLinks[1].textContent = t.projects.datasets.reviews;
-                projectCards[1].querySelector(".project-link").innerHTML = `${t.projects.datasets.github} <i class="fa-solid fa-arrow-right"></i>`;
-            }
-            if (projectCards[2]) {
-                projectCards[2].querySelector(".project-title").textContent = t.projects.forward.title;
-                projectCards[2].querySelector(".project-excerpt").textContent = t.projects.forward.excerpt;
-                projectCards[2].querySelector(".project-link").innerHTML = `${t.projects.forward.link} <i class="fa-solid fa-arrow-right"></i>`;
-            }
+            if (projectCards[0]) { projectCards[0].querySelector(".project-title").textContent = t.projects.tellpdf.title; projectCards[0].querySelector(".project-excerpt").textContent = t.projects.tellpdf.excerpt; projectCards[0].querySelector(".project-link").innerHTML = `${t.projects.tellpdf.link} <i class="fa-solid fa-arrow-right"></i>`; }
+            if (projectCards[1]) { projectCards[1].querySelector(".project-title").textContent = t.projects.datasets.title; projectCards[1].querySelector(".project-excerpt").textContent = t.projects.datasets.excerpt; const datasetLinks = projectCards[1].querySelectorAll(".dataset-links a"); if (datasetLinks[0]) datasetLinks[0].textContent = t.projects.datasets.products; if (datasetLinks[1]) datasetLinks[1].textContent = t.projects.datasets.reviews; projectCards[1].querySelector(".project-link").innerHTML = `${t.projects.datasets.github} <i class="fa-solid fa-arrow-right"></i>`; }
+            if (projectCards[2]) { projectCards[2].querySelector(".project-title").textContent = t.projects.forward.title; projectCards[2].querySelector(".project-excerpt").textContent = t.projects.forward.excerpt; projectCards[2].querySelector(".project-link").innerHTML = `${t.projects.forward.link} <i class="fa-solid fa-arrow-right"></i>`; }
 
             const researchHeader = document.querySelector("#research .section-header");
-            if (researchHeader) {
-                researchHeader.querySelector(".section-tag").textContent = t.research.tag;
-                researchHeader.querySelector(".section-title").textContent = t.research.title;
-                researchHeader.querySelector(".section-description").textContent = t.research.description;
-            }
+            if (researchHeader) { researchHeader.querySelector(".section-tag").textContent = t.research.tag; researchHeader.querySelector(".section-title").textContent = t.research.title; researchHeader.querySelector(".section-description").textContent = t.research.description; }
             document.querySelectorAll(".research-item").forEach((item, index) => {
-                const data = t.research.items[index];
-                if (!data) return;
-                const title = item.querySelector(".research-title");
-                const titleLink = item.querySelector(".research-title-link");
-                if (titleLink) titleLink.textContent = data[0];
-                else if (title) title.textContent = data[0];
+                const data = t.research.items[index]; if (!data) return;
+                const title = item.querySelector(".research-title"); const titleLink = item.querySelector(".research-title-link");
+                if (titleLink) titleLink.textContent = data[0]; else if (title) title.textContent = data[0];
                 item.querySelector(".research-text").textContent = data[1];
                 const stats = item.querySelectorAll(".stat-box");
                 if (stats[0]) { stats[0].querySelector(".stat-number").textContent = data[2][0]; stats[0].querySelector(".stat-label").textContent = data[2][1]; }
                 if (stats[1]) { stats[1].querySelector(".stat-number").textContent = data[3][0]; stats[1].querySelector(".stat-label").textContent = data[3][1]; }
-                const status = item.querySelector(".research-status");
-                if (status && index === 0) status.innerHTML = `<strong>${data[4]}</strong> — ${data[5]}`;
-                const link = item.querySelector(".research-link");
-                if (link) link.innerHTML = `${data[4]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+                const status = item.querySelector(".research-status"); if (status && index === 0) status.innerHTML = `<strong>${data[4]}</strong> — ${data[5]}`;
+                const link = item.querySelector(".research-link"); if (link) link.innerHTML = `${data[4]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
             });
 
             setText(".contact-title", t.contact.title);
-            document.querySelectorAll(".language-option").forEach(button => {
-                const active = button.dataset.language === lang;
-                button.classList.toggle("is-active", active);
-                button.setAttribute("aria-pressed", String(active));
-            });
+            document.querySelectorAll(".language-option").forEach(button => { const active = button.dataset.language === lang; button.classList.toggle("is-active", active); button.setAttribute("aria-pressed", String(active)); });
             localStorage.setItem("language", lang);
         }
 
@@ -274,7 +232,6 @@ document.addEventListener("DOMContentLoaded", () => {
             @media(max-width:768px){.nav-utilities{gap:.55rem}.language-option{font-size:.68rem;padding:.44rem .5rem}.theme-toggle{order:1}}
         `;
         document.head.appendChild(style);
-
         englishButton.addEventListener("click", () => setLanguages("en"));
         germanButton.addEventListener("click", () => setLanguages("de"));
         setLanguages(localStorage.getItem("language") === "de" ? "de" : "en");
