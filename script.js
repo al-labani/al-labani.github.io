@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     description: "A curated list of applications, datasets, pipelines, and frameworks built end-to-end.",
                     tellpdf: {
                         title: "TellPDF — AI-Powered Document Assistant",
-                        excerpt: "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.",
+                        excerpt: "Workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.",
                         link: "Visit Project"
                     },
                     datasets: {
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     description: "Eine kuratierte Auswahl an Anwendungen, Datensätzen, Pipelines und Frameworks, die von Grund auf entwickelt wurden.",
                     tellpdf: {
                         title: "TellPDF — KI-gestützter Dokumentassistent",
-                        excerpt: "Eine browserbasierte Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.",
+                        excerpt: "Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.",
                         link: "Projekt besuchen"
                     },
                     datasets: {
