@@ -46,9 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------------------------------------------------------------------
     // Language selector
     // ---------------------------------------------------------------------
-    // Two languages are few enough for an inline segmented control. We use
-    // native language names instead of flags or opaque abbreviations, keep the
-    // control in the header utility area, and expose the active state to AT.
+    // With only two languages, an inline segmented control is clearer than a
+    // dropdown. The labels use each language's native name for accessibility.
     const navLinks = document.querySelector(".nav-links");
     const navThemeToggle = document.getElementById("theme-toggle-btn");
 
@@ -93,9 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     description: "Education and professional experience in AI, robotics, and applied machine learning.",
                     items: [
                         ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
-                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Applied Skills: Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"],
+                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"],
                         ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Supervised Machine Learning: Regression and Classification", "Advanced Learning Algorithms", "Unsupervised Learning, Recommenders, and Reinforcement Learning"], "View Certificate"],
-                        ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "Applied Skills: AI prototyping, workflow mapping, stakeholder communication"],
+                        ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"],
                         ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
                         ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"]
                     ]
@@ -145,9 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     description: "Studium und Berufserfahrung in KI, Robotik und angewandtem maschinellem Lernen.",
                     items: [
                         ["M.Sc. KI & Robotik", "Technische Universität Nürnberg (UTN)", "Note 1,7"],
-                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachige Abfragen überführt.", "Angewandte Kompetenzen: Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"],
+                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachige Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"],
                         ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Überwachtes maschinelles Lernen: Regression und Klassifikation", "Fortgeschrittene Lernalgorithmen", "Unüberwachtes Lernen, Empfehlungssysteme und Reinforcement Learning"], "Zertifikat ansehen"],
-                        ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "Angewandte Kompetenzen: KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"],
+                        ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"],
                         ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
                         ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"]
                     ]
@@ -211,10 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             setText(".hero-tag", t.heroTag);
-            setHtml(".hero-subtitle", t.heroSubtitle.replace(" • ", ' <span class="bullet">•</span> ').replace(" • ", ' <span class="bullet">•</span> '));
+            setHtml(".hero-subtitle", t.heroSubtitle.replaceAll(" • ", ' <span class="bullet">•</span> '));
             const heroIntroLink = document.querySelector(".hero-intro a");
-            if (heroIntroLink) heroIntroLink.textContent = lang === "de" ? "Technische Universität Nürnberg" : "University of Technology Nuremberg";
-            setHtml(".hero-intro p", `${t.heroIntro.split(" @ ")[0]} @ <a href="https://www.utn.de/en/" target="_blank" rel="noopener noreferrer">${heroIntroLink?.textContent || "University of Technology Nuremberg"}</a>`);
+            const universityName = lang === "de" ? "Technische Universität Nürnberg" : "University of Technology Nuremberg";
+            setHtml(".hero-intro p", `${t.heroIntro.split(" @ ")[0]} @ <a href="https://www.utn.de/en/" target="_blank" rel="noopener noreferrer">${universityName}</a>`);
 
             const experienceHeader = document.querySelector("#experience .section-header");
             if (experienceHeader) {
@@ -233,13 +232,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const certificate = item.querySelector(".timeline-certificate");
                 if (Array.isArray(data[2])) {
                     if (courses) courses.innerHTML = data[2].map(course => `<li>${course}</li>`).join("");
-                    if (description) description.remove();
                     if (certificate) certificate.innerHTML = `${data[3]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
                 } else {
                     if (description) {
                         description.innerHTML = data[2] === "Grade 3.68/4.0" || data[2] === "Note 3,68/4,0" ? `${data[2]} <strong>(${data[3]})</strong>` : data[2];
                     }
-                    if (skills && data[3]) skills.innerHTML = `<strong>${lang === "de" ? "Angewandte Kompetenzen:" : "Applied Skills:"}</strong> ${data[3].replace(/^(Applied Skills:|Angewandte Kompetenzen:)\s*/, "")}`;
+                    if (skills && data[3]) skills.innerHTML = `<strong>${lang === "de" ? "Angewandte Kompetenzen:" : "Applied Skills:"}</strong> ${data[3]}`;
                 }
             });
 
@@ -278,7 +276,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(".research-item").forEach((item, index) => {
                 const data = t.research.items[index];
                 if (!data) return;
-                item.querySelector(".research-title").textContent = data[0];
+                const title = item.querySelector(".research-title");
+                const titleLink = item.querySelector(".research-title-link");
+                if (titleLink) titleLink.textContent = data[0];
+                else if (title) title.textContent = data[0];
                 item.querySelector(".research-text").textContent = data[1];
                 const stats = item.querySelectorAll(".stat-box");
                 if (stats[0]) {
@@ -313,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .language-option:hover{color:var(--text-color)}
             .language-option:focus-visible{outline:2px solid var(--accent-color);outline-offset:2px}
             .language-option.is-active{background:var(--text-color);color:var(--bg-color)}
-            @media(max-width:768px){.nav-utilities{gap:.55rem}.language-option{font-size:.68rem;padding:.44rem .5rem}.language-switcher{order:0}.theme-toggle{order:1}}
+            @media(max-width:768px){.nav-utilities{gap:.55rem}.language-option{font-size:.68rem;padding:.44rem .5rem}.theme-toggle{order:1}}
         `;
         document.head.appendChild(style);
 
