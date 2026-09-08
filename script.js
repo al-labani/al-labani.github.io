@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // ---------------------------------------------------------------------
-    // Language selector
-    // ---------------------------------------------------------------------
     const navLinks = document.querySelector(".nav-links");
     const navThemeToggle = document.getElementById("theme-toggle-btn");
 
@@ -101,27 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 projects: {
                     tag: "02 / Portfolio", title: "Selected Projects",
                     description: "A curated list of applications, datasets, pipelines, and frameworks built end-to-end.",
-                    tellpdf: {
-                        title: "TellPDF — AI-Powered Document Assistant",
-                        excerpt: "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.",
-                        link: "Visit Project"
-                    },
-                    datasets: {
-                        title: "Semantic Operator Datasets — Products & Reviews",
-                        excerpt: "Large-scale semantic-filter datasets built by applying LLM-generated predicates to Amazon products and reviews, producing structured Boolean labels for filtering and evaluation.",
-                        products: "View Products dataset on Hugging Face",
-                        reviews: "View Reviews dataset on Hugging Face",
-                        github: "View on GitHub"
-                    },
-                    forward: {
-                        title: "forward.md — AI-Assisted Workflow Convention",
-                        excerpt: "A lightweight markdown-based context-carrying standard for preserving context across AI coding tool sessions.",
-                        link: "View on GitHub"
-                    }
+                    tellpdf: { title: "TellPDF — AI-Powered Document Assistant", excerpt: "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.", link: "Visit Project" },
+                    datasets: { title: "Semantic Operator Datasets — Products & Reviews", excerpt: "Large-scale semantic-filter datasets built by applying LLM-generated predicates to Amazon products and reviews, producing structured Boolean labels for filtering and evaluation.", products: "View Products dataset on Hugging Face", reviews: "View Reviews dataset on Hugging Face", github: "View on GitHub" },
+                    forward: { title: "forward.md — AI-Assisted Workflow Convention", excerpt: "A lightweight markdown-based context-carrying standard for preserving context across AI coding tool sessions.", link: "View on GitHub" }
                 },
                 research: {
-                    tag: "03 / Research", title: "Research Projects",
-                    description: "Research in model training, distillation, retrieval, authorship verification, and evaluation.",
+                    tag: "03 / Research", title: "Research Projects", description: "Research in model training, distillation, retrieval, authorship verification, and evaluation.",
                     items: [
                         ["Master's Thesis: Online Model Distillation for Semantic Operations", "Compared full SFT, PEFT, soft- and hard-label distillation, and embedding-based logistic regression for training a small student model online from teacher outputs during query execution.", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing", "findings intended for research publication."],
                         ["UTN Student Support Chatbot", "Retrieval-augmented chatbot combining semantic search, keyword retrieval, and a fine-tuned model to help students navigate university documentation.", ["RAG", "Architecture"], ["PEFT", "Fine-tuned"], "View on Hugging Face"],
@@ -139,8 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 heroSubtitle: "KI- & Robotik-Student • ML und Generative KI • Forschung und Entwicklung",
                 heroIntro: "Masterstudent @ Technische Universität Nürnberg",
                 experience: {
-                    tag: "01 / Erfahrung", title: "Erfahrung",
-                    description: "Studium und Berufserfahrung in KI, Robotik und angewandtem maschinellem Lernen.",
+                    tag: "01 / Erfahrung", title: "Erfahrung", description: "Studium und Berufserfahrung in KI, Robotik und angewandtem maschinellem Lernen.",
                     items: [
                         ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"],
                         ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
@@ -152,29 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     ]
                 },
                 projects: {
-                    tag: "02 / Portfolio", title: "Ausgewählte Projekte",
-                    description: "Eine kuratierte Auswahl an Anwendungen, Datensätzen, Pipelines und Frameworks, die von Grund auf entwickelt wurden.",
-                    tellpdf: {
-                        title: "TellPDF — KI-gestützter Dokumentassistent",
-                        excerpt: "Eine browserbasierte Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.",
-                        link: "Projekt besuchen"
-                    },
-                    datasets: {
-                        title: "Semantic Operator Datasets — Produkte & Rezensionen",
-                        excerpt: "Groß angelegte Datensätze für semantische Filter, erzeugt durch die Anwendung von LLM-generierten Prädikaten auf Amazon-Produkte und Rezensionen mit strukturierten booleschen Labels für Filterung und Evaluation.",
-                        products: "Produkt-Datensatz auf Hugging Face",
-                        reviews: "Rezensions-Datensatz auf Hugging Face",
-                        github: "Auf GitHub ansehen"
-                    },
-                    forward: {
-                        title: "forward.md — KI-gestützter Workflow-Standard",
-                        excerpt: "Ein leichtgewichtiger Markdown-basierter Standard zur Weitergabe von Kontext zwischen Sitzungen mit KI-Coding-Tools.",
-                        link: "Auf GitHub ansehen"
-                    }
+                    tag: "02 / Portfolio", title: "Ausgewählte Projekte", description: "Eine kuratierte Auswahl an Anwendungen, Datensätzen, Pipelines und Frameworks, die von Grund auf entwickelt wurden.",
+                    tellpdf: { title: "TellPDF — KI-gestützter Dokumentassistent", excerpt: "Eine browserbasierte Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.", link: "Projekt besuchen" },
+                    datasets: { title: "Semantic Operator Datasets — Produkte & Rezensionen", excerpt: "Groß angelegte Datensätze für semantische Filter, erzeugt durch die Anwendung von LLM-generierten Prädikaten auf Amazon-Produkte und Rezensionen mit strukturierten booleschen Labels für Filterung und Evaluation.", products: "Produkt-Datensatz auf Hugging Face", reviews: "Rezensions-Datensatz auf Hugging Face", github: "Auf GitHub ansehen" },
+                    forward: { title: "forward.md — KI-gestützter Workflow-Standard", excerpt: "Ein leichtgewichtiger Markdown-basierter Standard zur Weitergabe von Kontext zwischen Sitzungen mit KI-Coding-Tools.", link: "Auf GitHub ansehen" }
                 },
                 research: {
-                    tag: "03 / Forschung", title: "Forschungsprojekte",
-                    description: "Forschung zu Modelltraining, Distillation, Retrieval, Autorschaftsverifikation und Evaluation.",
+                    tag: "03 / Forschung", title: "Forschungsprojekte", description: "Forschung zu Modelltraining, Distillation, Retrieval, Autorschaftsverifikation und Evaluation.",
                     items: [
                         ["Masterarbeit: Online Model Distillation für semantische Operationen", "Vergleich von vollständigem SFT, PEFT, Soft- und Hard-Label-Distillation sowie embedding-basierter logistischer Regression zum Online-Training eines kleinen Student-Modells aus Teacher-Ausgaben während der Query-Ausführung.", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend", "Ergebnisse sind für eine wissenschaftliche Veröffentlichung vorgesehen."],
                         ["UTN Student Support Chatbot", "Retrieval-augmentierter Chatbot, der semantische Suche, Keyword-Retrieval und ein feinabgestimmtes Modell kombiniert, um Studierenden die Navigation durch Hochschuldokumentation zu erleichtern.", ["RAG", "Architektur"], ["PEFT", "Feinabgestimmt"], "Auf Hugging Face ansehen"],
@@ -199,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
         function setLanguages(lang) {
             const t = translations[lang];
             if (!t) return;
-
             document.documentElement.lang = lang;
             document.title = t.title;
             const metaDescription = document.querySelector('meta[name="description"]');
@@ -233,13 +197,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (courses) courses.innerHTML = data[2].map(course => `<li>${course}</li>`).join("");
                     if (certificate) certificate.innerHTML = `${data[3]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
                 } else {
-                    if (description) {
-                        description.innerHTML = data[2] === "Grade 3.68/4.0" || data[2] === "Note 3,68/4,0" ? `${data[2]} <strong>(${data[3]})</strong>` : data[2];
-                    }
+                    if (description) description.innerHTML = data[2] === "Grade 3.68/4.0" || data[2] === "Note 3,68/4,0" ? `${data[2]} <strong>(${data[3]})</strong>` : data[2];
                     if (skills) {
                         const label = Array.isArray(data[4]) ? data[4][lang === "de" ? 0 : 1] : (lang === "de" ? "Angewandte Kompetenzen:" : "Applied Skills:");
-                        if (data[3]) skills.innerHTML = `<strong>${label}</strong> ${data[3]}`;
-                        else skills.innerHTML = "";
+                        skills.innerHTML = data[3] ? `<strong>${label}</strong> ${data[3]}` : "";
                     }
                 }
             });
@@ -285,14 +246,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 else if (title) title.textContent = data[0];
                 item.querySelector(".research-text").textContent = data[1];
                 const stats = item.querySelectorAll(".stat-box");
-                if (stats[0]) {
-                    stats[0].querySelector(".stat-number").textContent = data[2][0];
-                    stats[0].querySelector(".stat-label").textContent = data[2][1];
-                }
-                if (stats[1]) {
-                    stats[1].querySelector(".stat-number").textContent = data[3][0];
-                    stats[1].querySelector(".stat-label").textContent = data[3][1];
-                }
+                if (stats[0]) { stats[0].querySelector(".stat-number").textContent = data[2][0]; stats[0].querySelector(".stat-label").textContent = data[2][1]; }
+                if (stats[1]) { stats[1].querySelector(".stat-number").textContent = data[3][0]; stats[1].querySelector(".stat-label").textContent = data[3][1]; }
                 const status = item.querySelector(".research-status");
                 if (status && index === 0) status.innerHTML = `<strong>${data[4]}</strong> — ${data[5]}`;
                 const link = item.querySelector(".research-link");
@@ -300,7 +255,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             setText(".contact-title", t.contact.title);
-
             document.querySelectorAll(".language-option").forEach(button => {
                 const active = button.dataset.language === lang;
                 button.classList.toggle("is-active", active);
