@@ -46,8 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------------------------------------------------------------------
     // Language selector
     // ---------------------------------------------------------------------
-    // With only two languages, an inline segmented control is clearer than a
-    // dropdown. The labels use each language's native name for accessibility.
     const navLinks = document.querySelector(".nav-links");
     const navThemeToggle = document.getElementById("theme-toggle-btn");
 
@@ -91,12 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     tag: "01 / Experience", title: "Experience",
                     description: "Education and professional experience in AI, robotics, and applied machine learning.",
                     items: [
-                        ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
-                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"],
+                        ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"],
+                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
                         ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Supervised Machine Learning: Regression and Classification", "Advanced Learning Algorithms", "Unsupervised Learning, Recommenders, and Reinforcement Learning"], "View Certificate"],
                         ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"],
-                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
-                        ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"]
+                        ["Intensive German Language Training", "Goethe-Institut Göttingen, Göttingen, Germany", "Completed intensive German language training covering CEFR levels A1 to B1.", "German language development, A1–B1, intensive in-person study", ["Focus:", "Schwerpunkte:"]],
+                        ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
+                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"]
                     ]
                 },
                 projects: {
@@ -143,12 +142,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     tag: "01 / Erfahrung", title: "Erfahrung",
                     description: "Studium und Berufserfahrung in KI, Robotik und angewandtem maschinellem Lernen.",
                     items: [
-                        ["M.Sc. KI & Robotik", "Technische Universität Nürnberg (UTN)", "Note 1,7"],
-                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachige Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"],
+                        ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"],
+                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
                         ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Überwachtes maschinelles Lernen: Regression und Klassifikation", "Fortgeschrittene Lernalgorithmen", "Unüberwachtes Lernen, Empfehlungssysteme und Reinforcement Learning"], "Zertifikat ansehen"],
                         ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"],
-                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
-                        ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"]
+                        ["Intensives Deutschsprachtraining", "Goethe-Institut Göttingen, Göttingen, Deutschland", "Intensives Deutschsprachtraining über die GER-Niveaus A1 bis B1.", "Deutschsprachentwicklung, A1–B1, intensiver Präsenzunterricht", ["Schwerpunkte:", "Focus:"]],
+                        ["M.Sc. KI & Robotik", "Technische Universität Nürnberg (UTN)", "Note 1,7"],
+                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachige Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"]
                     ]
                 },
                 projects: {
@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setText(".hero-tag", t.heroTag);
             setHtml(".hero-subtitle", t.heroSubtitle.replaceAll(" • ", ' <span class="bullet">•</span> '));
-            const heroIntroLink = document.querySelector(".hero-intro a");
             const universityName = lang === "de" ? "Technische Universität Nürnberg" : "University of Technology Nuremberg";
             setHtml(".hero-intro p", `${t.heroIntro.split(" @ ")[0]} @ <a href="https://www.utn.de/en/" target="_blank" rel="noopener noreferrer">${universityName}</a>`);
 
@@ -237,7 +236,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (description) {
                         description.innerHTML = data[2] === "Grade 3.68/4.0" || data[2] === "Note 3,68/4,0" ? `${data[2]} <strong>(${data[3]})</strong>` : data[2];
                     }
-                    if (skills && data[3]) skills.innerHTML = `<strong>${lang === "de" ? "Angewandte Kompetenzen:" : "Applied Skills:"}</strong> ${data[3]}`;
+                    if (skills) {
+                        const label = Array.isArray(data[4]) ? data[4][lang === "de" ? 0 : 1] : (lang === "de" ? "Angewandte Kompetenzen:" : "Applied Skills:");
+                        if (data[3]) skills.innerHTML = `<strong>${label}</strong> ${data[3]}`;
+                        else skills.innerHTML = "";
+                    }
                 }
             });
 
@@ -323,8 +326,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setLanguages(localStorage.getItem("language") === "de" ? "de" : "en");
     }
 
-    // The current portfolio uses direct project links rather than case-study dialogs.
-    // Keep this guard so the older modal logic can be restored later without breaking the page.
     const modal = document.getElementById("project-modal");
     if (!modal) return;
 });
