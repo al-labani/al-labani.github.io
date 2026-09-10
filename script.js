@@ -84,13 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 experience: {
                     tag: "01 / Experience", title: "Experience", description: "Education and professional experience in AI, robotics, and applied machine learning.",
                     items: [
-                        ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"],
-                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
-                        ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Supervised Machine Learning: Regression and Classification", "Advanced Learning Algorithms", "Unsupervised Learning, Recommenders, and Reinforcement Learning"], "View Certificate"],
-                        ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"],
-                        ["Intensive German Language Training", "Goethe-Institut Göttingen, Göttingen, Germany", "Completed intensive German language training covering CEFR levels A1 to B1.", "German language development, A1–B1, intensive in-person study", ["Schwerpunkte:", "Focus:"]],
                         ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
-                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"]
+                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"],
+                        ["Intensive German Language Training", "Goethe-Institut Göttingen, Göttingen, Germany", "Completed intensive German language training covering CEFR levels A1 to B1.", "German language development, A1–B1, intensive in-person study", ["Schwerpunkte:", "Focus:"]],
+                        ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"],
+                        ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Supervised Machine Learning: Regression and Classification", "Advanced Learning Algorithms", "Unsupervised Learning, Recommenders, and Reinforcement Learning"], "View Certificate"],
+                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
+                        ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"]
                     ]
                 },
                 projects: {
@@ -120,13 +120,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 experience: {
                     tag: "01 / Erfahrung", title: "Erfahrung", description: "Studium und Berufserfahrung in KI, Robotik und angewandtem maschinellem Lernen.",
                     items: [
-                        ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"],
-                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
-                        ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Überwachtes maschinelles Lernen: Regression und Klassifikation", "Fortgeschrittene Lernalgorithmen", "Unüberwachtes Lernen, Empfehlungssysteme und Reinforcement Learning"], "Zertifikat ansehen"],
-                        ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"],
-                        ["Intensives Deutschsprachtraining", "Goethe-Institut Göttingen, Göttingen, Deutschland", "Intensives Deutschsprachtraining über die GER-Niveaus A1 bis B1.", "Deutschsprachentwicklung, A1–B1, intensiver Präsenzunterricht", ["Schwerpunkte:", "Focus:"]],
                         ["M.Sc. KI & Robotik", "Technische Universität Nürnberg (UTN)", "Note 1,7"],
-                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachige Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"]
+                        ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachliche Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"],
+                        ["Intensives Deutschsprachtraining", "Goethe-Institut Göttingen, Göttingen, Deutschland", "Intensives Deutschsprachtraining über die GER-Niveaus A1 bis B1.", "Deutschsprachentwicklung, A1–B1, intensiver Präsenzunterricht", ["Schwerpunkte:", "Focus:"]],
+                        ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"],
+                        ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Überwachtes maschinelles Lernen: Regression und Klassifikation", "Fortgeschrittene Lernalgorithmen", "Unüberwachtes Lernen, Empfehlungssysteme und Reinforcement Learning"], "Zertifikat ansehen"],
+                        ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
+                        ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"]
                     ]
                 },
                 projects: {
@@ -180,13 +180,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const courses = item.querySelector(".timeline-courses");
                 const certificate = item.querySelector(".timeline-certificate");
                 if (Array.isArray(data[2])) {
+                    if (description) description.textContent = "";
                     if (courses) courses.innerHTML = data[2].map(course => `<li>${course}</li>`).join("");
                     if (certificate) certificate.innerHTML = `${data[3]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
                 } else {
                     if (description) description.innerHTML = data[2] === "Grade 3.68/4.0" || data[2] === "Note 3,68/4,0" ? `${data[2]} <strong>(${data[3]})</strong>` : data[2];
                     if (skills) {
                         const label = Array.isArray(data[4]) ? data[4][lang === "de" ? 0 : 1] : (lang === "de" ? "Angewandte Kompetenzen:" : "Applied Skills:");
-                        skills.innerHTML = data[3] ? `<strong>${label}</strong> ${data[3]}` : "";
+                        skills.innerHTML = data[3] && !Array.isArray(data[4]) ? `<strong>${label}</strong> ${data[3]}` : (data[3] && !data[4] ? `<strong>${label}</strong> ${data[3]}` : "");
                     }
                 }
             });
