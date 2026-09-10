@@ -9,12 +9,29 @@
 .language-option:focus-visible{outline:2px solid var(--accent-color);outline-offset:2px}
 .nav-utilities .theme-toggle{flex:0 0 auto}
 
-/* Reduce the transition into the Portfolio section without changing other sections. */
-.projects-section .section-container{padding-top:2.5rem}
+/* Tighter transition from Experience into Portfolio. */
+.experience-section .section-container{padding-bottom:2rem}
+.projects-section .section-container{padding-top:2rem}
+
+/* Compact unified contact / footer block. */
+.contact-section{background:var(--accent-light)}
+.contact-card{padding:2.25rem 0 1.75rem}
+.contact-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:.5rem}
+.contact-links{gap:1rem}
+.contact-email{font-family:var(--font-sans);font-size:clamp(1.2rem,2.5vw,1.7rem);border-bottom:1px solid var(--border-color);padding-bottom:.2rem}
+.contact-social-row{gap:1.75rem;margin-top:.15rem}
+.contact-social-row a{font-size:.9rem}
+.footer{background:var(--accent-light);border-top:0;padding:.25rem 0 1.5rem}
+.footer-container{border-top:1px solid var(--border-color);padding-top:1rem;font-size:.78rem}
 
 @media(max-width:768px){
   .nav-utilities{gap:.5rem}
   .language-switcher{padding:.1rem}
   .language-option{font-size:.72rem;padding:.35rem .45rem}
-  .projects-section .section-container{padding-top:2rem}
+  .experience-section .section-container{padding-bottom:1.5rem}
+  .projects-section .section-container{padding-top:1.5rem}
+  .contact-card{padding:1.75rem 0 1.25rem}
+  .contact-social-row{gap:1rem}
+  .footer{padding-bottom:1rem}
+  .footer-container{padding-top:.75rem}
 }
