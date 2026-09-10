@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="research-stats">
                     <div class="stat-box"><span class="stat-number">81.95%</span><span class="stat-label">Sequence Accuracy</span></div>
                     <div class="stat-box"><span class="stat-number">94.6%</span><span class="stat-label">Character-Level Accuracy</span></div>
-                    <div class="stat-box"><span class="stat-number">5.43%</span><span class="stat-label">LER</span></div>
                 </div>
             </div>`;
         researchGrid.appendChild(card);
