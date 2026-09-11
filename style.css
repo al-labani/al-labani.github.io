@@ -3,9 +3,9 @@
 /* Header utilities: compact English / Deutsch switcher */
 .nav-utilities{display:flex;align-items:center;gap:1rem}
 .language-switcher{display:flex;align-items:center;gap:0;padding:.15rem;border:1px solid var(--border-color);background:transparent}
-.language-option{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:var(--text-muted);font-family:var(--font-sans);font-size:.8rem;font-weight:600;line-height:1;padding:.4rem .6rem;cursor:pointer;transition:var(--transition-fast)}
+.language-option{appearance:none;-webkit-appearance:none;border:0;border-radius:0;background:transparent;color:var(--text-muted);font-family:var(--font-sans);font-size:.8rem;font-weight:600;line-height:1;padding:.4rem .6rem;cursor:pointer;transition:background-color var(--transition-fast),color var(--transition-fast),box-shadow var(--transition-fast)}
 .language-option:hover{color:var(--text-color)}
-.language-option.active{background:var(--text-color);color:var(--bg-color)}
+.language-option.active{background:var(--text-color);color:var(--bg-color);box-shadow:inset 0 -2px 0 var(--accent-color)}
 .language-option:focus-visible{outline:2px solid var(--accent-color);outline-offset:2px}
 .nav-utilities .theme-toggle{flex:0 0 auto}
 
