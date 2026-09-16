@@ -12,6 +12,10 @@
 /* Hide German language training from the visible Experience timeline. */
 .experience-section .timeline-item:nth-child(3){display:none}
 
+/* Hide course descriptions only for the two specialization entries. */
+.experience-section .timeline-item:nth-child(5) .timeline-courses,
+.experience-section .timeline-item:nth-child(6) .timeline-courses{display:none}
+
 /* Tighter transition from Experience into Portfolio. */
 .experience-section .section-container{padding-bottom:2rem}
 .projects-section .section-container{padding-top:2rem}
