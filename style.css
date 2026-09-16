@@ -9,6 +9,9 @@
 .language-option:focus-visible{outline:2px solid var(--accent-color);outline-offset:2px}
 .nav-utilities .theme-toggle{flex:0 0 auto}
 
+/* Hide German language training from the visible Experience timeline. */
+.experience-section .timeline-item:nth-child(3){display:none}
+
 /* Tighter transition from Experience into Portfolio. */
 .experience-section .section-container{padding-bottom:2rem}
 .projects-section .section-container{padding-top:2rem}
