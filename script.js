@@ -113,14 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 ]
             },
             projects: {
-                tag: "02 / Portfolio", title: "Selected Projects",
+                tag: "03 / Portfolio", title: "Selected Projects",
                 description: "A curated list of applications, datasets, pipelines, and frameworks built end-to-end.",
                 tellpdf: ["TellPDF — AI-Powered Document Assistant", "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.", "Open App"],
                 datasets: ["Semantic Operator Datasets — Products & Reviews", "Large-scale semantic-filter datasets built by applying LLM-generated predicates to Amazon products and reviews, producing structured Boolean labels for filtering and evaluation.", "View Products dataset on Hugging Face", "View Reviews dataset on Hugging Face", "View on GitHub"],
                 forward: ["forward.md — AI-Assisted Workflow Convention", "A lightweight markdown-based context-carrying standard for preserving context across AI coding tool sessions.", "View on GitHub"]
             },
             research: {
-                tag: "03 / Research", title: "Research Projects",
+                tag: "04 / Research", title: "Research Projects",
                 description: "Research in model training, distillation, retrieval, authorship verification, and evaluation.",
                 items: [
                     ["Master's Thesis: Online Model Distillation for Semantic Operations", "Compared full SFT, PEFT, soft- and hard-label distillation, and embedding-based logistic regression for training a small student model online from teacher outputs during query execution.", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing", "findings intended for research publication."],
@@ -158,14 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 ]
             },
             projects: {
-                tag: "02 / Portfolio", title: "Ausgewählte Projekte",
+                tag: "03 / Portfolio", title: "Ausgewählte Projekte",
                 description: "Eine kuratierte Auswahl an Anwendungen, Datensätzen, Pipelines und Frameworks, die von Grund auf entwickelt wurden.",
                 tellpdf: ["TellPDF — KI-gestützter Dokumentassistent", "Eine browserbasierte Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.", "App öffnen"],
                 datasets: ["Semantic Operator Datasets — Produkte & Rezensionen", "Groß angelegte Datensätze für semantische Filter, erzeugt durch die Anwendung von LLM-generierten Prädikaten auf Amazon-Produkte und Rezensionen mit strukturierten booleschen Labels für Filterung und Evaluation.", "Produkt-Datensatz auf Hugging Face", "Rezensions-Datensatz auf Hugging Face", "Auf GitHub ansehen"],
                 forward: ["forward.md — KI-gestützter Workflow-Standard", "Ein leichtgewichtiger Markdown-basierter Standard zur Weitergabe von Kontext zwischen Sitzungen mit KI-Coding-Tools.", "Auf GitHub ansehen"]
             },
             research: {
-                tag: "03 / Forschung", title: "Forschungsprojekte",
+                tag: "04 / Forschung", title: "Forschungsprojekte",
                 description: "Forschung zu Modelltraining, Distillation, Retrieval, Autorschaftsverifikation und Evaluation.",
                 items: [
                     ["Masterarbeit: Online Model Distillation für semantische Operationen", "Vergleich von vollständigem SFT, PEFT, Soft- und Hard-Label-Distillation sowie embedding-basierter logistischer Regression zum Online-Training eines kleinen Student-Modells aus Teacher-Ausgaben während der Query-Ausführung.", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend", "Ergebnisse sind für eine wissenschaftliche Veröffentlichung vorgesehen."],
