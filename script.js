@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
             eduHeader.querySelector(".section-description").textContent = t.education.description;
         }
 
-                const projHeader = document.querySelector("#projects .section-header");
+        const projHeader = document.querySelector("#projects .section-header");
         if (projHeader) {
             projHeader.querySelector(".section-tag").textContent = t.projects.tag;
             projHeader.querySelector(".section-title").textContent = t.projects.title;
