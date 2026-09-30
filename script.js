@@ -96,26 +96,31 @@ document.addEventListener("DOMContentLoaded", () => {
             heroIntro: "Master Student @ University of Technology Nuremberg",
             experience: {
                 tag: "01 / Experience", title: "Experience",
-                description: "Education and professional experience in AI, robotics, and applied machine learning.",
+                description: "Professional experience in AI, applied machine learning, and technology development.",
+                items: [
+                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"],
+                    ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"]
+                ]
+            },
+            education: {
+                tag: "02 / Education & Certifications", title: "Education & Certifications",
+                description: "Academic background and professional certifications in AI, machine learning, and engineering.",
                 items: [
                     ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
-                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany", "Built an agentic pipeline using LangChain that automatically validates and ingests 13 inconsistent industrial data sources into a unified database for natural-language querying.", "Agentic AI, RAG, LangChain, automated data ingestion and data preprocessing"],
-                    ["Intensive German Language Training", "Goethe-Institut Göttingen, Göttingen, Germany", "Completed intensive German language training covering CEFR levels A1 to B1.", "German language development, A1–B1, intensive in-person study"],
-                    ["Business Development (AI)", "Sekuen, Dubai, UAE", "Built and presented working AI prototypes to potential B2B clients across multiple industries.", "AI prototyping, workflow mapping, stakeholder communication"],
-                    ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Supervised Machine Learning: Regression and Classification", "Advanced Learning Algorithms", "Unsupervised Learning, Recommenders, and Reinforcement Learning"], "View Certificate"],
-                    ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programming for Everybody (Getting Started with Python)", "Python Data Structures", "Using Python to Access Web Data", "Using Databases with Python", "Capstone: Retrieving, Processing, and Visualizing Data with Python"], "View Certificate"],
+                    ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", "", "View Certificate"],
+                    ["Python for Everybody Specialization", "University of Michigan · Coursera", "", "View Certificate"],
                     ["B.Sc. Electrical Engineering", "University of Technology Malaysia (UTM)", "Grade 3.68/4.0", "First Class Honours"]
                 ]
             },
             projects: {
-                tag: "02 / Portfolio", title: "Selected Projects",
+                tag: "03 / Portfolio", title: "Selected Projects",
                 description: "A curated list of applications, datasets, pipelines, and frameworks built end-to-end.",
-                tellpdf: ["TellPDF — AI-Powered Document Assistant", "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.", "Visit Project"],
+                tellpdf: ["TellPDF — AI-Powered Document Assistant", "A browser-based workspace with an agentic AI planner for interacting with documents directly in-browser, without server-side uploads.", "Open App"],
                 datasets: ["Semantic Operator Datasets — Products & Reviews", "Large-scale semantic-filter datasets built by applying LLM-generated predicates to Amazon products and reviews, producing structured Boolean labels for filtering and evaluation.", "View Products dataset on Hugging Face", "View Reviews dataset on Hugging Face", "View on GitHub"],
                 forward: ["forward.md — AI-Assisted Workflow Convention", "A lightweight markdown-based context-carrying standard for preserving context across AI coding tool sessions.", "View on GitHub"]
             },
             research: {
-                tag: "03 / Research", title: "Research Projects",
+                tag: "04 / Research", title: "Research Projects",
                 description: "Research in model training, distillation, retrieval, authorship verification, and evaluation.",
                 items: [
                     ["Master's Thesis: Online Model Distillation for Semantic Operations", "Compared full SFT, PEFT, soft- and hard-label distillation, and embedding-based logistic regression for training a small student model online from teacher outputs during query execution.", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing", "findings intended for research publication."],
@@ -136,26 +141,31 @@ document.addEventListener("DOMContentLoaded", () => {
             heroIntro: "Masterstudent @ Technische Universität Nürnberg",
             experience: {
                 tag: "01 / Erfahrung", title: "Erfahrung",
-                description: "Studium und Berufserfahrung in KI, Robotik und angewandtem maschinellem Lernen.",
+                description: "Berufserfahrung in KI, angewandtem maschinellem Lernen und Technologieentwicklung.",
+                items: [
+                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachliche Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"],
+                    ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"]
+                ]
+            },
+            education: {
+                tag: "02 / Ausbildung & Zertifikate", title: "Ausbildung & Zertifikate",
+                description: "Akademischer Hintergrund und Zertifikate in KI, maschinellem Lernen und Elektrotechnik.",
                 items: [
                     ["M.Sc. KI & Robotik", "Technische Universität Nürnberg (UTN)", "Note 1,7"],
-                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland", "Entwicklung einer agentischen Pipeline mit LangChain, die 13 inkonsistente industrielle Datenquellen automatisch validiert und in eine einheitliche Datenbank für natürlichsprachliche Abfragen überführt.", "Agentic AI, RAG, LangChain, automatisierte Datenaufnahme und Datenvorverarbeitung"],
-                    ["Intensives Deutschsprachtraining", "Goethe-Institut Göttingen, Göttingen, Deutschland", "Intensives Deutschsprachtraining über die GER-Niveaus A1 bis B1.", "Deutschsprachentwicklung, A1–B1, intensiver Präsenzunterricht"],
-                    ["Business Development (KI)", "Sekuen, Dubai, VAE", "Entwicklung und Präsentation funktionierender KI-Prototypen für potenzielle B2B-Kunden aus verschiedenen Branchen.", "KI-Prototyping, Workflow-Mapping, Stakeholder-Kommunikation"],
-                    ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", ["Überwachtes maschinelles Lernen: Regression und Klassifikation", "Fortgeschrittene Lernalgorithmen", "Unüberwachtes Lernen, Empfehlungssysteme und Reinforcement Learning"], "Zertifikat ansehen"],
-                    ["Python for Everybody Specialization", "University of Michigan · Coursera", ["Programmieren mit Python", "Python-Datenstrukturen", "Webdaten mit Python abrufen", "Arbeiten mit Datenbanken in Python", "Capstone: Abrufen, Verarbeiten und Visualisieren von Daten mit Python"], "Zertifikat ansehen"],
+                    ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", "", "Zertifikat ansehen"],
+                    ["Python for Everybody Specialization", "University of Michigan · Coursera", "", "Zertifikat ansehen"],
                     ["B.Sc. Elektrotechnik", "Universiti Teknologi Malaysia (UTM)", "Note 3,68/4,0", "First Class Honours"]
                 ]
             },
             projects: {
-                tag: "02 / Portfolio", title: "Ausgewählte Projekte",
+                tag: "03 / Portfolio", title: "Ausgewählte Projekte",
                 description: "Eine kuratierte Auswahl an Anwendungen, Datensätzen, Pipelines und Frameworks, die von Grund auf entwickelt wurden.",
-                tellpdf: ["TellPDF — KI-gestützter Dokumentassistent", "Eine browserbasierte Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.", "Projekt besuchen"],
+                tellpdf: ["TellPDF — KI-gestützter Dokumentassistent", "Eine browserbasierte Arbeitsumgebung mit einem agentischen KI-Planer zur direkten Interaktion mit Dokumenten im Browser, ohne serverseitige Uploads.", "App öffnen"],
                 datasets: ["Semantic Operator Datasets — Produkte & Rezensionen", "Groß angelegte Datensätze für semantische Filter, erzeugt durch die Anwendung von LLM-generierten Prädikaten auf Amazon-Produkte und Rezensionen mit strukturierten booleschen Labels für Filterung und Evaluation.", "Produkt-Datensatz auf Hugging Face", "Rezensions-Datensatz auf Hugging Face", "Auf GitHub ansehen"],
                 forward: ["forward.md — KI-gestützter Workflow-Standard", "Ein leichtgewichtiger Markdown-basierter Standard zur Weitergabe von Kontext zwischen Sitzungen mit KI-Coding-Tools.", "Auf GitHub ansehen"]
             },
             research: {
-                tag: "03 / Forschung", title: "Forschungsprojekte",
+                tag: "04 / Forschung", title: "Forschungsprojekte",
                 description: "Forschung zu Modelltraining, Distillation, Retrieval, Autorschaftsverifikation und Evaluation.",
                 items: [
                     ["Masterarbeit: Online Model Distillation für semantische Operationen", "Vergleich von vollständigem SFT, PEFT, Soft- und Hard-Label-Distillation sowie embedding-basierter logistischer Regression zum Online-Training eines kleinen Student-Modells aus Teacher-Ausgaben während der Query-Ausführung.", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend", "Ergebnisse sind für eine wissenschaftliche Veröffentlichung vorgesehen."],
@@ -232,33 +242,57 @@ document.addEventListener("DOMContentLoaded", () => {
             expHeader.querySelector(".section-title").textContent = t.experience.title;
             expHeader.querySelector(".section-description").textContent = t.experience.description;
         }
-        document.querySelectorAll(".timeline-item").forEach((item, index) => {
-            const data = t.experience.items[index];
-            if (!data) return;
-            item.querySelector(".timeline-title").textContent = data[0];
-            item.querySelector(".timeline-org").textContent = data[1];
-            const description = item.querySelector(".timeline-description");
-            const skills = item.querySelector(".timeline-skills");
-            const courses = item.querySelector(".timeline-courses");
-            const certificate = item.querySelector(".timeline-certificate");
-            if (Array.isArray(data[2])) {
-                if (courses) courses.innerHTML = data[2].map(course => `<li>${course}</li>`).join("");
-                if (description) description.textContent = "";
-            } else if (description) {
-                description.innerHTML = data[2] || "";
-                if (data[3] === "First Class Honours") description.innerHTML = `${data[2]} <strong>(First Class Honours)</strong>`;
-            }
-            if (skills) {
-                if (data[3] && typeof data[3] === "string" && data[3] !== "First Class Honours" && !data[3].startsWith("View") && !data[3].startsWith("Zertifikat")) {
-                    skills.innerHTML = `<strong>${lang === "de" ? "Schwerpunkte" : "Applied Skills"}:</strong> ${data[3]}`;
-                } else {
-                    skills.textContent = "";
+        const updateTimeline = (selector, items) => {
+            document.querySelectorAll(`${selector} .timeline-item`).forEach((item, index) => {
+                const data = items[index];
+                if (!data) return;
+                const title = item.querySelector(".timeline-title");
+                const org = item.querySelector(".timeline-org");
+                const description = item.querySelector(".timeline-description");
+                const skills = item.querySelector(".timeline-skills");
+                const courses = item.querySelector(".timeline-courses");
+                const certificate = item.querySelector(".timeline-certificate");
+
+                if (title) title.textContent = data[0];
+                if (org) org.textContent = data[1];
+
+                if (description) {
+                    if (Array.isArray(data[2])) {
+                        description.textContent = "";
+                    } else {
+                        description.innerHTML = data[2] || "";
+                        if (data[3] === "First Class Honours") {
+                            description.innerHTML = `${data[2]} <strong>(First Class Honours)</strong>`;
+                        }
+                    }
                 }
-            }
-            if (certificate && (data[3] || "").startsWith("View") || certificate && (data[3] || "").startsWith("Zertifikat")) {
-                certificate.innerHTML = `${data[3]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
-            }
-        });
+                if (courses) {
+                    courses.innerHTML = Array.isArray(data[2]) ? data[2].map(course => `<li>${course}</li>`).join("") : "";
+                }
+                if (skills) {
+                    if (data[3] && typeof data[3] === "string" && data[3] !== "First Class Honours" && !data[3].startsWith("View") && !data[3].startsWith("Zertifikat")) {
+                        skills.innerHTML = `<strong>${lang === "de" ? "Schwerpunkte" : "Applied Skills"}:</strong> ${data[3]}`;
+                    } else {
+                        skills.textContent = "";
+                    }
+                }
+                if (certificate) {
+                    certificate.innerHTML = ((data[3] || "").startsWith("View") || (data[3] || "").startsWith("Zertifikat"))
+                        ? `${data[3]} <i class="fa-solid fa-arrow-up-right-from-square"></i>`
+                        : "";
+                }
+            });
+        };
+
+        updateTimeline("#experience", t.experience.items);
+        updateTimeline("#education", t.education.items);
+
+        const eduHeader = document.querySelector("#education .section-header");
+        if (eduHeader) {
+            eduHeader.querySelector(".section-tag").textContent = t.education.tag;
+            eduHeader.querySelector(".section-title").textContent = t.education.title;
+            eduHeader.querySelector(".section-description").textContent = t.education.description;
+        }
 
         const projHeader = document.querySelector("#projects .section-header");
         if (projHeader) {
@@ -293,6 +327,15 @@ document.addEventListener("DOMContentLoaded", () => {
             researchHeader.querySelector(".section-description").textContent = t.research.description;
         }
         updateResearch(t.research.items);
+
+        const plotcraftCard = document.querySelectorAll(".research-item")[2];
+        const plotcraftLinks = plotcraftCard ? plotcraftCard.querySelectorAll(".research-link") : [];
+        if (plotcraftLinks.length > 0) {
+            plotcraftLinks[0].innerHTML = `${lang === "de" ? "Auf GitHub ansehen" : "View on GitHub"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+        }
+        if (plotcraftLinks.length > 1) {
+            plotcraftLinks[1].innerHTML = `${lang === "de" ? "Ausprobieren" : "Try it"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+        }
 
         document.querySelectorAll(".language-option").forEach(button => {
             const active = button.dataset.language === lang;
