@@ -70,3 +70,6 @@
   .project-image-wrapper{margin-bottom:.75rem}
   .research-item{padding:1.1rem}
 }
+
+/* Remove horizontal separators from timeline entries. */
+.timeline-item{border-bottom:0}
