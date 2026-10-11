@@ -73,3 +73,7 @@
 
 /* Remove horizontal separators from timeline entries. */
 .timeline-item{border-bottom:0}
+
+/* Keep the PlotCraft action links visibly separated. */
+.research-links{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center}
+.research-links .research-link{margin-top:0}
