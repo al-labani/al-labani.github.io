@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
             research: {
                 tag: "04 / Research", title: "Research Projects",
                 items: [
-                    ["Master's Thesis: Online Model Distillation for Semantic Operations", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing"],
+                    ["Online Model Distillation for Semantic Operations", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing"],
                     ["UTN Student Support Chatbot", ["RAG", "Architecture"], ["PEFT", "Fine-tuned"]],
                     ["PlotCraft: Scientific Figure Generation from Text", ["97%", "Code Execution Rate"], ["53K", "Sample Dataset"]],
                     ["LLM Authorship Verification on German Texts", ["40K+", "Text Pairs Analyzed"], ["0.68", "GPT-4.1-mini F1"]],
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             research: {
                 tag: "04 / Forschung", title: "Forschungsprojekte",
                 items: [
-                    ["Masterarbeit: Online Model Distillation für semantische Operationen", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend"],
+                    ["Online Model Distillation für semantische Operationen", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend"],
                     ["UTN Student Support Chatbot", ["RAG", "Architektur"], ["PEFT", "Feinabgestimmt"]],
                     ["PlotCraft: Wissenschaftliche Abbildungen aus Text generieren", ["97%", "Code-Ausführungsrate"], ["53K", "Beispieldatensatz"]],
                     ["LLM-Autorschaftsverifikation für deutsche Texte", ["40K+", "Analysierte Textpaare"], ["0,68", "GPT-4.1-mini F1"]],
@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
             plotcraftLinks[0].innerHTML = `${lang === "de" ? "Auf GitHub ansehen" : "View on GitHub"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
         }
         if (plotcraftLinks.length > 1) {
-            plotcraftLinks[1].innerHTML = `${lang === "de" ? "Ausprobieren" : "Try it"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+            plotcraftLinks[1].innerHTML = `${lang === "de" ? "Auf Hugging Face testen" : "Test on Hugging Face"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
         }
 
         document.querySelectorAll(".language-option").forEach(button => {
