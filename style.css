@@ -38,3 +38,35 @@
   .footer{padding-bottom:1rem}
   .footer-container{padding-top:.75rem}
 }
+
+/* Compact layout after removing introductory and card descriptions. */
+.hero-section{padding:7.5rem 0 1.25rem}
+.hero-intro{margin-bottom:.75rem}
+.hero-intro p{font-size:inherit;line-height:inherit}
+.section-container{padding-top:3rem;padding-bottom:3rem}
+.section-header{margin-bottom:1.5rem}
+.experience-section .section-container{padding-bottom:1.25rem}
+.education-section .section-container{padding-top:1.25rem;padding-bottom:1.25rem}
+.projects-section .section-container{padding-top:1.25rem}
+.timeline-item{padding:.9rem 0 1rem;min-height:0}
+.timeline-item:first-child{padding-top:.85rem}
+.projects-grid{gap:2rem 2.5rem}
+.project-image-wrapper{margin-bottom:.9rem}
+.project-meta{margin-bottom:.5rem}
+.project-title{margin-bottom:.5rem}
+.research-grid{gap:1rem}
+.research-item{padding:1.35rem}
+.research-title{margin-bottom:.6rem}
+.research-stats{margin-bottom:.9rem}
+
+@media(max-width:768px){
+  .hero-section{padding-top:7rem;padding-bottom:1rem}
+  .section-container{padding-top:2.5rem;padding-bottom:2.5rem}
+  .section-header{margin-bottom:1.25rem}
+  .experience-section .section-container{padding-bottom:1rem}
+  .education-section .section-container{padding-top:1rem;padding-bottom:1rem}
+  .projects-section .section-container{padding-top:1rem}
+  .projects-grid{gap:1.5rem}
+  .project-image-wrapper{margin-bottom:.75rem}
+  .research-item{padding:1.1rem}
+}
