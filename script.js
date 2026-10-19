@@ -111,7 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 tag: "03 / Portfolio", title: "Selected Projects",
                 tellpdf: ["TellPDF — AI-Powered Document Assistant", "Open App"],
                 datasets: ["Semantic Operator Datasets — Products & Reviews", "View Products dataset on Hugging Face", "View Reviews dataset on Hugging Face", "View on GitHub"],
-                forward: ["forward.md — AI-Assisted Workflow Convention", "View on GitHub"]
+                forward: ["forward.md — AI-Assisted Workflow Convention", "View on GitHub"],
+                skinCancer: ["Skin Cancer Classification", "View on GitHub"]
             },
             research: {
                 tag: "04 / Research", title: "Research Projects",
@@ -150,7 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 tag: "03 / Portfolio", title: "Ausgewählte Projekte",
                 tellpdf: ["TellPDF — KI-gestützter Dokumentassistent", "App öffnen"],
                 datasets: ["Semantic Operator Datasets — Produkte & Rezensionen", "Produkt-Datensatz auf Hugging Face", "Rezensions-Datensatz auf Hugging Face", "Auf GitHub ansehen"],
-                forward: ["forward.md — KI-gestützter Workflow-Standard", "Auf GitHub ansehen"]
+                forward: ["forward.md — KI-gestützter Workflow-Standard", "Auf GitHub ansehen"],
+                skinCancer: ["Skin Cancer Classification", "Auf GitHub ansehen"]
             },
             research: {
                 tag: "04 / Forschung", title: "Forschungsprojekte",
@@ -297,6 +299,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (projectCards[2]) {
             projectCards[2].querySelector(".project-title").textContent = t.projects.forward[0];
             projectCards[2].querySelector(".project-link").innerHTML = `${t.projects.forward[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        }
+        if (projectCards[3]) {
+            projectCards[3].querySelector(".project-title").textContent = t.projects.skinCancer[0];
+            projectCards[3].querySelector(".project-link").innerHTML = `${t.projects.skinCancer[1]} <i class="fa-solid fa-arrow-right"></i>`;
         }
 
         const researchHeader = document.querySelector("#research .section-header");
