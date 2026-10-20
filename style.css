@@ -100,7 +100,7 @@
 .credentials-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:2rem;align-items:stretch}
 .credentials-section .credentials-column{min-width:0;border-top:0}
 .credentials-column:first-child{padding-right:1rem}
-.credentials-column + .credentials-column{border-left:1px solid var(--border-color);padding-left:2rem}
+.credentials-column + .credentials-column{border-left:0;padding-left:2rem}
 .credentials-column .section-header{margin-bottom:1.4rem}
 .credentials-column .section-tag{margin-bottom:.5rem}
 .credentials-column .section-title{font-size:clamp(2rem,3vw,3rem);margin-bottom:.5rem}
