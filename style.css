@@ -118,3 +118,8 @@
   .credentials-section .credentials-container{padding-top:1.5rem;padding-bottom:1.5rem}
   .credentials-column .timeline-item{grid-template-columns:1fr;row-gap:.5rem}
 }
+
+/* Keep the CAPTCHA card sized to its own content, not its grid row. */
+.special-project-card[data-project="captcha"]{align-self:start;height:fit-content;padding:1.1rem 1.25rem}
+.special-project-card[data-project="captcha"] .research-info{display:block;width:100%}
+.special-project-card[data-project="captcha"] .research-stats{gap:1.25rem;margin:.4rem 0 .65rem;padding-top:0}
