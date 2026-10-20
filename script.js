@@ -71,8 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
             experience: {
                 tag: "01 / Experience", title: "Experience",
                 items: [
-                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Germany"],
-                    ["Business Development (AI)", "Sekuen, Dubai, UAE"]
+                    ["Master’s Thesis Researcher (Masterarbeit)", "UTN Data Systems | Nuremberg, DE"],
+                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG | Herzogenaurach, Germany"],
+                    ["Business Development (AI)", "Sekuen | Dubai, UAE"]
                 ]
             },
             education: {
@@ -106,8 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
             experience: {
                 tag: "01 / Erfahrung", title: "Erfahrung",
                 items: [
-                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG, Herzogenaurach, Deutschland"],
-                    ["Business Development (KI)", "Sekuen, Dubai, VAE"]
+                    ["Master’s Thesis Researcher (Masterarbeit)", "UTN Data Systems | Nürnberg, Deutschland"],
+                    ["Praktikant (Pflichtpraktikum)", "Schaeffler AG | Herzogenaurach, Deutschland"],
+                    ["Business Development (KI)", "Sekuen | Dubai, VAE"]
                 ]
             },
             education: {
