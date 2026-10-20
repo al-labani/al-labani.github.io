@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 plotcraft: ["PlotCraft: Scientific Figure Generation from Text", "View on GitHub", "Test on Hugging Face"],
                 authorship: ["LLM Authorship Verification on German Texts", "View on GitHub"],
                 distillation: ["Online Model Distillation for Semantic Operations", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing"],
-                captcha: ["CNN-Transformer CAPTCHA Solver", ["81.95%", "Sequence Accuracy"], ["94.6%", "Character-Level Accuracy"], ["5.43%", "LER"]]
+                captcha: ["CNN-Transformer CAPTCHA Solver", ["81.95%", "Sequence Accuracy"], ["94.6%", "Character-Level Accuracy"], ["5.43%", "LER"]],
+                inkPuzzle: ["Ink Puzzle — Unlimited LinkedIn Games", "Open Website"]
             },
             contact: { title: "Contact" }
         },
@@ -131,7 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 plotcraft: ["PlotCraft: Wissenschaftliche Abbildungen aus Text generieren", "Auf GitHub ansehen", "Auf Hugging Face testen"],
                 authorship: ["LLM-Autorschaftsverifikation für deutsche Texte", "Auf GitHub ansehen"],
                 distillation: ["Online Model Distillation für semantische Operationen", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend"],
-                captcha: ["CNN-Transformer CAPTCHA-Solver", ["81,95 %", "Sequenzgenauigkeit"], ["94,6 %", "Zeichenebengenauigkeit"], ["5,43 %", "LER"]]
+                captcha: ["CNN-Transformer CAPTCHA-Solver", ["81,95 %", "Sequenzgenauigkeit"], ["94,6 %", "Zeichenebengenauigkeit"], ["5,43 %", "LER"]],
+                inkPuzzle: ["Ink Puzzle — Unbegrenzte LinkedIn-Spiele", "Website öffnen"]
             },
             contact: { title: "Kontakt" }
         }
@@ -257,6 +259,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (authorshipCard) {
             authorshipCard.querySelector(".project-title").textContent = t.projects.authorship[0];
             authorshipCard.querySelector(".project-link").innerHTML = `${t.projects.authorship[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        }
+        const inkPuzzleCard = document.querySelector('[data-project="ink-puzzle"]');
+        if (inkPuzzleCard) {
+            inkPuzzleCard.querySelector(".project-title").textContent = t.projects.inkPuzzle[0];
+            inkPuzzleCard.querySelector(".project-link").innerHTML = `${t.projects.inkPuzzle[1]} <i class="fa-solid fa-arrow-right"></i>`;
         }
 
         const updateMetricProject = (selector, data) => {
