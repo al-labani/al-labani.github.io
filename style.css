@@ -84,3 +84,12 @@
 .project-img-contain{object-fit:contain;object-position:center;filter:none}
 .project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.25rem}
 .project-actions .project-link{margin-top:.25rem}
+
+/* Render both timelines in their explicit newest-first source order. */
+.experience-timeline{flex-direction:column}
+
+/* Prevent the distillation card from stretching to match its neighboring grid card. */
+.special-project-card[data-project="distillation"]{align-self:start;height:fit-content;padding:1.1rem 1.25rem}
+.special-project-card[data-project="distillation"] .research-info{display:block;width:100%}
+.special-project-card[data-project="distillation"] .research-stats{gap:1.25rem;margin:.4rem 0 .65rem;padding-top:0}
+.special-project-card[data-project="distillation"] .research-status{margin-top:.65rem}
