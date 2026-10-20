@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ]
             },
             education: {
-                tag: "02 / Education & Certifications", title: "Education & Certifications",
+                tag: "02 / Education", title: "Education",
                 items: [
                     ["M.Sc. AI & Robotics", "University of Technology Nuremberg (UTN)", "Grade 1.7"],
                     ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", "", "View Certificate"],
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ]
             },
             education: {
-                tag: "02 / Ausbildung & Zertifikate", title: "Ausbildung & Zertifikate",
+                tag: "02 / Ausbildung", title: "Ausbildung",
                 items: [
                     ["M.Sc. KI & Robotik", "Technische Universität Nürnberg (UTN)", "Note 1,7"],
                     ["Machine Learning Specialization", "Stanford Online & DeepLearning.AI · Coursera", "", "Zertifikat ansehen"],
