@@ -77,3 +77,10 @@
 /* Keep the PlotCraft action links visibly separated. */
 .research-links{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center}
 .research-links .research-link{margin-top:0}
+
+/* Fit supplied project screenshots without cropping important diagram content. */
+.project-image-wrapper-contain{display:flex;align-items:center;justify-content:center;background:#fff}
+.project-image-wrapper-contain.project-image-dark{background:#0b0f18}
+.project-img-contain{object-fit:contain;object-position:center;filter:none}
+.project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.25rem}
+.project-actions .project-link{margin-top:.25rem}
