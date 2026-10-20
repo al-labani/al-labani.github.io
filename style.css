@@ -93,3 +93,28 @@
 .special-project-card[data-project="distillation"] .research-info{display:block;width:100%}
 .special-project-card[data-project="distillation"] .research-stats{gap:1.25rem;margin:.4rem 0 .65rem;padding-top:0}
 .special-project-card[data-project="distillation"] .research-status{margin-top:.65rem}
+
+/* Present Experience and Education as one responsive, two-column section. */
+.credentials-section{border-top:1px solid var(--border-color)}
+.credentials-section .credentials-container{padding-top:2rem;padding-bottom:2.25rem}
+.credentials-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:2rem;align-items:stretch}
+.credentials-section .credentials-column{min-width:0;border-top:0}
+.credentials-column:first-child{padding-right:1rem}
+.credentials-column + .credentials-column{border-left:1px solid var(--border-color);padding-left:2rem}
+.credentials-column .section-header{margin-bottom:1.4rem}
+.credentials-column .section-tag{margin-bottom:.5rem}
+.credentials-column .section-title{font-size:clamp(2rem,3vw,3rem);margin-bottom:.5rem}
+.credentials-column .timeline-item{grid-template-columns:minmax(0,37%) minmax(0,1fr);column-gap:1.1rem}
+.credentials-column .timeline-date{font-size:.88rem;white-space:normal;overflow-wrap:anywhere}
+.credentials-column .timeline-content{padding-right:0}
+.credentials-column .timeline-title{font-size:1.15rem}
+
+@media(max-width:1050px){
+  .credentials-grid{grid-template-columns:minmax(0,1fr);row-gap:2rem}
+  .credentials-column:first-child{padding-right:0}
+  .credentials-column + .credentials-column{border-left:0;border-top:1px solid var(--border-color);padding-left:0;padding-top:2rem}
+}
+@media(max-width:768px){
+  .credentials-section .credentials-container{padding-top:1.5rem;padding-bottom:1.5rem}
+  .credentials-column .timeline-item{grid-template-columns:1fr;row-gap:.5rem}
+}
