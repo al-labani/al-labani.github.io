@@ -62,34 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     navLinks.appendChild(utilities);
 
-    const researchGrid = document.querySelector(".research-grid");
-    if (researchGrid && !researchGrid.querySelector("[data-captcha-research]")) {
-        const card = document.createElement("article");
-        card.className = "research-item scroll-reveal";
-        card.dataset.captchaResearch = "true";
-        card.innerHTML = `
-            <div class="research-info">
-                <h3 class="research-title">CNN-Transformer CAPTCHA Solver</h3>
-                <div class="research-stats">
-                    <div class="stat-box"><span class="stat-number">81.95%</span><span class="stat-label">Sequence Accuracy</span></div>
-                    <div class="stat-box"><span class="stat-number">94.6%</span><span class="stat-label">Character-Level Accuracy</span></div>
-                </div>
-            </div>`;
-        researchGrid.appendChild(card);
-        const resizeStats = () => {
-            const stats = card.querySelector(".research-stats");
-            if (stats) stats.style.gridTemplateColumns = window.innerWidth < 700 ? "1fr" : "repeat(3, minmax(0, 1fr))";
-        };
-        resizeStats();
-        window.addEventListener("resize", resizeStats, { passive: true });
-        observer.observe(card);
-    }
-
     const translations = {
         en: {
             title: "Abdullah Al-Labani — Selected Projects & Portfolio",
             description: "Portfolio of Abdullah Al-Labani, AI & Robotics Student specializing in ML Engineering, Generative AI, and applied research.",
-            nav: ["Experience", "Projects", "Research"],
+            nav: ["Experience", "Projects", "Education"],
             heroGreeting: "Hi, my name is Abdullah Al-Labani, based in Nürnberg, Germany",
             experience: {
                 tag: "01 / Experience", title: "Experience",
@@ -112,24 +89,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 tellpdf: ["TellPDF — AI-Powered Document Assistant", "Open App"],
                 datasets: ["Semantic Operator Datasets — Products & Reviews", "View Products dataset on Hugging Face", "View Reviews dataset on Hugging Face", "View on GitHub"],
                 forward: ["forward.md — AI-Assisted Workflow Convention", "View on GitHub"],
-                skinCancer: ["Skin Cancer Classification", "View on GitHub"]
-            },
-            research: {
-                tag: "04 / Research", title: "Research Projects",
-                items: [
-                    ["Online Model Distillation for Semantic Operations", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing"],
-                    ["UTN Student Support Chatbot", ["RAG", "Architecture"], ["PEFT", "Fine-tuned"]],
-                    ["PlotCraft: Scientific Figure Generation from Text", ["97%", "Code Execution Rate"], ["53K", "Sample Dataset"]],
-                    ["LLM Authorship Verification on German Texts", ["40K+", "Text Pairs Analyzed"], ["0.68", "GPT-4.1-mini F1"]],
-                    ["CNN-Transformer CAPTCHA Solver", ["81.95%", "Sequence Accuracy"], ["94.6%", "Character-Level Accuracy"], ["5.43%", "LER"]]
-                ]
+                skinCancer: ["Skin Cancer Classification", "View on GitHub"],
+                utnChatbot: ["UTN Student Support Chatbot", "View on Hugging Face"],
+                plotcraft: ["PlotCraft: Scientific Figure Generation from Text", "View on GitHub", "Test on Hugging Face"],
+                authorship: ["LLM Authorship Verification on German Texts", "View on GitHub"],
+                distillation: ["Online Model Distillation for Semantic Operations", ["SFT", "Full Fine-tuning"], ["PEFT", "Efficient Fine-tuning"], "Ongoing"],
+                captcha: ["CNN-Transformer CAPTCHA Solver", ["81.95%", "Sequence Accuracy"], ["94.6%", "Character-Level Accuracy"], ["5.43%", "LER"]]
             },
             contact: { title: "Contact" }
         },
         de: {
             title: "Abdullah Al-Labani — Ausgewählte Projekte & Portfolio",
             description: "Portfolio von Abdullah Al-Labani, KI- und Robotik-Student mit Schwerpunkt auf ML Engineering, Generativer KI und angewandter Forschung.",
-            nav: ["Erfahrung", "Projekte", "Forschung"],
+            nav: ["Erfahrung", "Projekte", "Ausbildung"],
             heroGreeting: "Hallo, ich heiße Abdullah Al-Labani und lebe in Nürnberg, Deutschland",
             experience: {
                 tag: "01 / Erfahrung", title: "Erfahrung",
@@ -152,17 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 tellpdf: ["TellPDF — KI-gestützter Dokumentassistent", "App öffnen"],
                 datasets: ["Semantic Operator Datasets — Produkte & Rezensionen", "Produkt-Datensatz auf Hugging Face", "Rezensions-Datensatz auf Hugging Face", "Auf GitHub ansehen"],
                 forward: ["forward.md — KI-gestützter Workflow-Standard", "Auf GitHub ansehen"],
-                skinCancer: ["Skin Cancer Classification", "Auf GitHub ansehen"]
-            },
-            research: {
-                tag: "04 / Forschung", title: "Forschungsprojekte",
-                items: [
-                    ["Online Model Distillation für semantische Operationen", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend"],
-                    ["UTN Student Support Chatbot", ["RAG", "Architektur"], ["PEFT", "Feinabgestimmt"]],
-                    ["PlotCraft: Wissenschaftliche Abbildungen aus Text generieren", ["97%", "Code-Ausführungsrate"], ["53K", "Beispieldatensatz"]],
-                    ["LLM-Autorschaftsverifikation für deutsche Texte", ["40K+", "Analysierte Textpaare"], ["0,68", "GPT-4.1-mini F1"]],
-                    ["CNN-Transformer CAPTCHA-Solver", ["81,95 %", "Sequenzgenauigkeit"], ["94,6 %", "Zeichenebengenauigkeit"], ["5,43 %", "LER"]]
-                ]
+                skinCancer: ["Skin Cancer Classification", "Auf GitHub ansehen"],
+                utnChatbot: ["UTN Student Support Chatbot", "Auf Hugging Face ansehen"],
+                plotcraft: ["PlotCraft: Wissenschaftliche Abbildungen aus Text generieren", "Auf GitHub ansehen", "Auf Hugging Face testen"],
+                authorship: ["LLM-Autorschaftsverifikation für deutsche Texte", "Auf GitHub ansehen"],
+                distillation: ["Online Model Distillation für semantische Operationen", ["SFT", "Vollständiges Fine-Tuning"], ["PEFT", "Effizientes Fine-Tuning"], "Laufend"],
+                captcha: ["CNN-Transformer CAPTCHA-Solver", ["81,95 %", "Sequenzgenauigkeit"], ["94,6 %", "Zeichenebengenauigkeit"], ["5,43 %", "LER"]]
             },
             contact: { title: "Kontakt" }
         }
@@ -175,38 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const setHtml = (selector, value) => {
         const el = document.querySelector(selector);
         if (el) el.innerHTML = value;
-    };
-
-    const updateResearch = (items) => {
-        document.querySelectorAll(".research-item").forEach((item, index) => {
-            const data = items[index];
-            if (!data) return;
-
-            const title = item.querySelector(".research-title");
-            const titleLink = item.querySelector(".research-title-link");
-            if (titleLink) titleLink.textContent = data[0];
-            else if (title) title.textContent = data[0];
-
-            const statsContainer = item.querySelector(".research-stats");
-            if (!statsContainer) return;
-            const metricData = data.slice(1).filter(Array.isArray);
-            metricData.forEach((stat, statIndex) => {
-                let box = statsContainer.querySelectorAll(".stat-box")[statIndex];
-                if (!box) {
-                    box = document.createElement("div");
-                    box.className = "stat-box";
-                    box.innerHTML = '<span class="stat-number"></span><span class="stat-label"></span>';
-                    statsContainer.appendChild(box);
-                }
-                box.querySelector(".stat-number").textContent = stat[0];
-                box.querySelector(".stat-label").textContent = stat[1];
-            });
-
-            const status = item.querySelector(".research-status");
-            if (status && index === 0 && typeof data[3] === "string") {
-                status.innerHTML = `<strong>${data[3]}</strong>`;
-            }
-        });
     };
 
     const setLanguages = (lang) => {
@@ -304,22 +239,44 @@ document.addEventListener("DOMContentLoaded", () => {
             projectCards[3].querySelector(".project-title").textContent = t.projects.skinCancer[0];
             projectCards[3].querySelector(".project-link").innerHTML = `${t.projects.skinCancer[1]} <i class="fa-solid fa-arrow-right"></i>`;
         }
+        const utnCard = document.querySelector('[data-project="utn-chatbot"]');
+        if (utnCard) {
+            utnCard.querySelector(".project-title").textContent = t.projects.utnChatbot[0];
+            utnCard.querySelector(".project-link").innerHTML = `${t.projects.utnChatbot[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        }
+        const plotcraftCard = document.querySelector('[data-project="plotcraft"]');
+        if (plotcraftCard) {
+            plotcraftCard.querySelector(".project-title").textContent = t.projects.plotcraft[0];
+            const links = plotcraftCard.querySelectorAll(".project-actions .project-link");
+            if (links[0]) links[0].innerHTML = `${t.projects.plotcraft[1]} <i class="fa-solid fa-arrow-right"></i>`;
+            if (links[1]) links[1].innerHTML = `${t.projects.plotcraft[2]} <i class="fa-solid fa-arrow-right"></i>`;
+        }
+        const authorshipCard = document.querySelector('[data-project="authorship"]');
+        if (authorshipCard) {
+            authorshipCard.querySelector(".project-title").textContent = t.projects.authorship[0];
+            authorshipCard.querySelector(".project-link").innerHTML = `${t.projects.authorship[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        }
 
-        const researchHeader = document.querySelector("#research .section-header");
-        if (researchHeader) {
-            researchHeader.querySelector(".section-tag").textContent = t.research.tag;
-            researchHeader.querySelector(".section-title").textContent = t.research.title;
-        }
-        updateResearch(t.research.items);
-
-        const plotcraftCard = document.querySelectorAll(".research-item")[2];
-        const plotcraftLinks = plotcraftCard ? plotcraftCard.querySelectorAll(".research-link") : [];
-        if (plotcraftLinks.length > 0) {
-            plotcraftLinks[0].innerHTML = `${lang === "de" ? "Auf GitHub ansehen" : "View on GitHub"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
-        }
-        if (plotcraftLinks.length > 1) {
-            plotcraftLinks[1].innerHTML = `${lang === "de" ? "Auf Hugging Face testen" : "Test on Hugging Face"} <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
-        }
+        const updateMetricProject = (selector, data) => {
+            const card = document.querySelector(selector);
+            if (!card) return;
+            const title = card.querySelector(".research-title");
+            if (title) title.textContent = data[0];
+            const metrics = data.slice(1).filter(Array.isArray);
+            card.querySelectorAll(".stat-box").forEach((box, index) => {
+                const metric = metrics[index];
+                if (!metric) return;
+                const number = box.querySelector(".stat-number");
+                const label = box.querySelector(".stat-label");
+                if (number) number.textContent = metric[0];
+                if (label) label.textContent = metric[1];
+            });
+            const statusText = data.slice(1).find(value => typeof value === "string");
+            const status = card.querySelector(".research-status strong");
+            if (status && statusText) status.textContent = statusText;
+        };
+        updateMetricProject('[data-project="distillation"]', t.projects.distillation);
+        updateMetricProject('[data-project="captcha"]', t.projects.captcha);
 
         document.querySelectorAll(".language-option").forEach(button => {
             const active = button.dataset.language === lang;
