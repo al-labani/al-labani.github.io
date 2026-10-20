@@ -35,6 +35,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     if (!navLinks) return;
 
+    const projectTabButtons = Array.from(document.querySelectorAll(".project-tab"));
+    const setProjectTab = (name, focusButton = false) => {
+        projectTabButtons.forEach(button => {
+            const active = button.dataset.projectTab === name;
+            button.setAttribute("aria-selected", String(active));
+            button.tabIndex = active ? 0 : -1;
+            if (active && focusButton) button.focus();
+        });
+        document.querySelectorAll("[data-project-panel]").forEach(panel => {
+            const active = panel.dataset.projectPanel === name;
+            panel.hidden = !active;
+            panel.classList.toggle("active", active);
+        });
+    };
+    projectTabButtons.forEach((button, index) => {
+        button.addEventListener("click", () => setProjectTab(button.dataset.projectTab));
+        button.addEventListener("keydown", event => {
+            let nextIndex = index;
+            if (event.key === "ArrowRight") nextIndex = (index + 1) % projectTabButtons.length;
+            else if (event.key === "ArrowLeft") nextIndex = (index - 1 + projectTabButtons.length) % projectTabButtons.length;
+            else if (event.key === "Home") nextIndex = 0;
+            else if (event.key === "End") nextIndex = projectTabButtons.length - 1;
+            else return;
+            event.preventDefault();
+            setProjectTab(projectTabButtons[nextIndex].dataset.projectTab, true);
+        });
+    });
+    setProjectTab("selected");
+
+
     const utilities = document.createElement("div");
     utilities.className = "nav-utilities";
     const languageNav = document.createElement("nav");
@@ -86,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ]
             },
             projects: {
-                tag: "03 / Portfolio", title: "Selected Projects",
+                tag: "03 / Portfolio", title: "Projects", tabs: ["Selected Projects", "Personal Projects"],
                 tellpdf: ["TellPDF — AI-Powered Document Assistant", "Open App"],
                 datasets: ["Semantic Operator Datasets — Products & Reviews", "View Products dataset on Hugging Face", "View Reviews dataset on Hugging Face", "View on GitHub"],
                 forward: ["forward.md — AI-Assisted Workflow Convention", "View on GitHub"],
@@ -123,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ]
             },
             projects: {
-                tag: "03 / Portfolio", title: "Ausgewählte Projekte",
+                tag: "03 / Portfolio", title: "Projekte", tabs: ["Ausgewählte Projekte", "Persönliche Projekte"],
                 tellpdf: ["TellPDF — KI-gestützter Dokumentassistent", "App öffnen"],
                 datasets: ["Semantic Operator Datasets — Produkte & Rezensionen", "Produkt-Datensatz auf Hugging Face", "Rezensions-Datensatz auf Hugging Face", "Auf GitHub ansehen"],
                 forward: ["forward.md — KI-gestützter Workflow-Standard", "Auf GitHub ansehen"],
@@ -223,25 +253,33 @@ document.addEventListener("DOMContentLoaded", () => {
             projHeader.querySelector(".section-tag").textContent = t.projects.tag;
             projHeader.querySelector(".section-title").textContent = t.projects.title;
         }
-        const projectCards = document.querySelectorAll(".project-card");
-        if (projectCards[0]) {
-            projectCards[0].querySelector(".project-title").textContent = t.projects.tellpdf[0];
-            projectCards[0].querySelector(".project-link").innerHTML = `${t.projects.tellpdf[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        document.querySelectorAll(".project-tab").forEach(button => {
+            const tabIndex = button.dataset.projectTab === "selected" ? 0 : 1;
+            button.textContent = t.projects.tabs[tabIndex];
+        });
+        const tellpdfCard = document.querySelector('[data-project="tellpdf"]');
+        if (tellpdfCard) {
+            tellpdfCard.querySelector(".project-title").textContent = t.projects.tellpdf[0];
+            tellpdfCard.querySelector(".project-link").innerHTML = `${t.projects.tellpdf[1]} <i class="fa-solid fa-arrow-right"></i>`;
         }
-        if (projectCards[1]) {
-            projectCards[1].querySelector(".project-title").textContent = t.projects.datasets[0];
-            const links = projectCards[1].querySelectorAll(".dataset-links a");
-            if (links[0]) links[0].textContent = t.projects.datasets[1];
-            if (links[1]) links[1].textContent = t.projects.datasets[2];
-            projectCards[1].querySelector(".project-link").innerHTML = `${t.projects.datasets[3]} <i class="fa-solid fa-arrow-right"></i>`;
+        const datasetsCard = document.querySelector('[data-project="datasets"]');
+        if (datasetsCard) {
+            datasetsCard.querySelector(".project-title").textContent = t.projects.datasets[0];
+            const datasetLinks = datasetsCard.querySelectorAll(".dataset-links a");
+            if (datasetLinks[0]) datasetLinks[0].textContent = t.projects.datasets[1];
+            if (datasetLinks[1]) datasetLinks[1].textContent = t.projects.datasets[2];
+            const githubLink = datasetsCard.querySelector(".project-link");
+            if (githubLink) githubLink.innerHTML = `${t.projects.datasets[3]} <i class="fa-solid fa-arrow-right"></i>`;
         }
-        if (projectCards[2]) {
-            projectCards[2].querySelector(".project-title").textContent = t.projects.forward[0];
-            projectCards[2].querySelector(".project-link").innerHTML = `${t.projects.forward[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        const forwardCard = document.querySelector('[data-project="forward"]');
+        if (forwardCard) {
+            forwardCard.querySelector(".project-title").textContent = t.projects.forward[0];
+            forwardCard.querySelector(".project-link").innerHTML = `${t.projects.forward[1]} <i class="fa-solid fa-arrow-right"></i>`;
         }
-        if (projectCards[3]) {
-            projectCards[3].querySelector(".project-title").textContent = t.projects.skinCancer[0];
-            projectCards[3].querySelector(".project-link").innerHTML = `${t.projects.skinCancer[1]} <i class="fa-solid fa-arrow-right"></i>`;
+        const skinCancerCard = document.querySelector('[data-project="skin-cancer"]');
+        if (skinCancerCard) {
+            skinCancerCard.querySelector(".project-title").textContent = t.projects.skinCancer[0];
+            skinCancerCard.querySelector(".project-link").innerHTML = `${t.projects.skinCancer[1]} <i class="fa-solid fa-arrow-right"></i>`;
         }
         const utnCard = document.querySelector('[data-project="utn-chatbot"]');
         if (utnCard) {
